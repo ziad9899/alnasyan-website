@@ -559,6 +559,8 @@ textarea {
 ul,
 ol {
   padding-left: 20px;
+}body {
+  background-color: #ffffff; /* اللون الأبيض */
 }
 /* Fade effect */
 /* Over effect */
