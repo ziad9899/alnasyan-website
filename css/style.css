@@ -1,12 +1,12 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif; /* سيتم اختيار خط عربي مناسب لاحقاً */
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* اللون الأبيض للخلفية العامة */
+    background-color: #ffffff;
     color: #333333;
     line-height: 1.6;
-    direction: rtl; /* دعم اللغة العربية */
+    direction: rtl;
 }
 
 .container {
@@ -18,11 +18,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #006400; /* اللون الأخضر الداكن للروابط */
+    color: #006400;
 }
 
 a:hover {
-    color: #FF8C00; /* اللون البرتقالي الداكن عند التحويم */
+    color: #FF8C00;
 }
 
 img {
@@ -32,7 +32,7 @@ img {
 
 /* Header */
 header {
-    background-color: #006400;
+    background-color: #0d2f1f; /* لون الشعار الأخضر الغامق */
     color: #ffffff;
     padding: 15px 0;
     position: fixed;
@@ -86,8 +86,8 @@ header nav .nav-menu li a:hover {
     color: #FFD700;
 }
 
-header .header-actions .lang-switch,
-header .header-actions .search-icon {
+.header-actions .lang-switch,
+.header-actions .search-icon {
     color: #ffffff;
     margin-left: 15px;
     font-weight: bold;
@@ -96,7 +96,7 @@ header .header-actions .search-icon {
     cursor: pointer;
 }
 
-header .header-actions .search-icon svg {
+.header-actions .search-icon svg {
     vertical-align: middle;
 }
 
@@ -144,7 +144,7 @@ header .header-actions .search-icon svg {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-.hero .scroll-down-btn {
+.scroll-down-btn {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -157,7 +157,7 @@ header .header-actions .search-icon svg {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.hero .scroll-down-btn:hover {
+.scroll-down-btn:hover {
     background-color: #ffffff;
     color: #006400;
 }
@@ -273,6 +273,11 @@ footer {
     fill: currentColor;
 }
 
+.vision-logo {
+    width: 100px;
+    margin-top: 15px;
+}
+
 .copyright {
     text-align: center;
     padding-top: 20px;
@@ -280,7 +285,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     header nav .menu-toggle {
         display: block;
@@ -292,7 +297,7 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: #005000;
+        background-color: #0d2f1f; /* نفس اللون الغامق */
         padding: 10px 0;
     }
     header nav .nav-menu.active {
@@ -313,3 +318,4 @@ footer {
         font-size: 1.2em;
     }
 }
+
