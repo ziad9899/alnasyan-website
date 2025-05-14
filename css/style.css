@@ -1,49 +1,316 @@
-
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
-    color: #333;
+    font-family: 'Arial', sans-serif; /* سيتم اختيار خط عربي مناسب لاحقاً */
     margin: 0;
     padding: 0;
-    direction: rtl;
+    background-color: #ffffff; /* اللون الأبيض للخلفية العامة */
+    color: #333333;
+    line-height: 1.6;
+    direction: rtl; /* دعم اللغة العربية */
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #006400; /* اللون الأخضر الداكن للروابط (لون اللوجو) */
+}
+
+a:hover {
+    color: #FF8C00; /* اللون البرتقالي الداكن عند التحويم */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
 header {
-    background-color: #004d26;
-    padding: 20px;
-    text-align: center;
-    color: white;
+    background-color: #006400; /* اللون الأخضر الداكن للشريط العلوي (لون اللوجو) */
+    color: #ffffff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav ul {
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* تعديل حسب حجم اللوجو */
+}
+
+header nav .menu-toggle {
+    display: none; /* سيتم إظهاره في شاشات الجوال */
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header nav .nav-menu {
     list-style: none;
     padding: 0;
-    text-align: center;
-    background-color: #006633;
     margin: 0;
+    display: flex;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 10px;
+header nav .nav-menu li {
+    margin-right: 25px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+header nav .nav-menu li:last-child {
+    margin-right: 0;
+}
+
+header nav .nav-menu li a {
+    color: #ffffff;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-main {
-    padding: 20px;
+header nav .nav-menu li a:hover {
+    color: #FFD700; /* لون برتقالي/ذهبي خفيف للتحويم على القائمة */
 }
 
-footer {
-    background-color: #004d26;
-    color: white;
-    text-align: center;
-    padding: 10px;
+header .header-actions .lang-switch,
+header .header-actions .search-icon {
+    color: #ffffff;
+    margin-left: 15px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header .header-actions .search-icon svg {
+    vertical-align: middle;
+}
+
+/* Hero Section */
+.hero {
     position: relative;
-    bottom: 0;
-    width: 100%;
+    height: 100vh; /* ارتفاع يملأ الشاشة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 70px; /* لتعويض ارتفاع الهيدر الثابت */
 }
+
+.hero .hero-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لتغطية المساحة بالكامل */
+    z-index: -2;
+}
+
+.hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 77, 0, 0.6); /* اللون الأخضر مع شفافية للبانر */
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.hero .scroll-down-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .scroll-down-btn:hover {
+    background-color: #ffffff;
+    color: #006400; /* اللون الأخضر الداكن */
+}
+
+/* Overview Section */
+.overview-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* لون خلفية فاتح للقسم */
+}
+
+.overview-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #006400; /* اللون الأخضر الداكن للعناوين */
+    margin-bottom: 40px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.overview-item h3 {
+    font-size: 2.8em;
+    color: #FF8C00; /* اللون البرتقالي الداكن للأرقام البارزة */
+    margin-bottom: 5px;
+}
+
+.overview-item p {
+    font-size: 1.1em;
+    color: #555555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #006400; /* اللون الأخضر الداكن للأزرار الرئيسية */
+    color: #ffffff;
+    border: 2px solid #006400;
+}
+
+.btn-primary:hover {
+    background-color: #004d00; /* أخضر أغمق قليلاً عند التحويم */
+    border-color: #004d00;
+}
+
+.overview-section .btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* لون داكن للفوتر */
+    color: #cccccc;
+    padding: 40px 0 20px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #FF8C00; /* خط برتقالي تحت عناوين الفوتر */
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.footer-col p,
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col a {
+    color: #cccccc;
+}
+
+.footer-col a:hover {
+    color: #FF8C00; /* اللون البرتقالي الداكن عند التحويم */
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.social-icons a svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555555;
+    font-size: 0.9em;
+}
+
+/* Responsive Design (مثال بسيط) */
+@media (max-width: 768px) {
+    header nav .menu-toggle {
+        display: block;
+    }
+    header nav .nav-menu {
+        display: none; /* إخفاء القائمة مبدئياً */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* تحت الهيدر */
+        left: 0;
+        width: 100%;
+        background-color: #005000; /* أخضر أغمق قليلاً لخلفية القائمة المنسدلة */
+        padding: 10px 0;
+    }
+    header nav .nav-menu.active {
+        display: flex; /* إظهار القائمة عند الضغط */
+    }
+    header nav .nav-menu li {
+        margin: 0;
+        text-align: center;
+    }
+    header nav .nav-menu li a {
+        display: block;
+        padding: 12px 15px;
+    }
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+
