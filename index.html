@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شركة النصيان القابضة</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* تعديل لون الشريط */
+        header {
+            background-color: #0b2f24;
+            color: #ffffff;
+        }
+
+        /* تحسين البنر للجوال */
+        @media (max-width: 768px) {
+            .hero {
+                background-color: #0b2f24;
+                height: 60vh;
+                justify-content: flex-end;
+                padding-bottom: 50px;
+            }
+
+            .hero-banner {
+                display: none;
+            }
+
+            .hero-overlay {
+                background-color: transparent;
+            }
+
+            .hero h1,
+            .hero p {
+                color: #d79c5a;
+                text-shadow: none;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -45,6 +84,7 @@
         <section class="hero">
             <img src="img/banner.jpeg" alt="بانر رئيسي - مال وأعمال" class="hero-banner">
             <div class="hero-overlay">
+                <h1>شركة النصيان القابضة</h1>
                 <p>مستقبل واعد، بإرث عريق</p>
             </div>
             <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
