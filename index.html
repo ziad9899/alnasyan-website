@@ -1,157 +1,160 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة النصيان القابضة</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* تعديل لون الشريط */
-        header {
-            background-color: #0b2f24;
-            color: #ffffff;
-        }
-
-        /* تحسين البنر للجوال */
-        @media (max-width: 768px) {
-            .hero {
-                background-color: #0b2f24;
-                height: 60vh;
-                justify-content: flex-end;
-                padding-bottom: 50px;
-            }
-
-            .hero-banner {
-                display: none;
-            }
-
-            .hero-overlay {
-                background-color: transparent;
-            }
-
-            .hero h1,
-            .hero p {
-                color: #d79c5a;
-                text-shadow: none;
-            }
-
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة النصيان القابضة</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    header {
+      background-color: #0b2f24;
+    }
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding-top: 70px;
+      background-color: #0b2f24;
+    }
+    .hero-banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(11, 47, 36, 0.7);
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 3em;
+      color: #d79c5a;
+    }
+    .scroll-down-btn {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      background-color: transparent;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2em;
+      }
+      .hero-banner {
+        object-fit: contain;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة"></a>
-            </div>
-            <nav>
-                <button class="menu-toggle" aria-label="القائمة">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="about.html">عن الشركة</a></li>
-                    <li><a href="companies.html">شركاتنا</a></li>
-                    <li><a href="sustainability.html">الاستدامة</a></li>
-                    <li><a href="media.html">المركز الإعلامي</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
-                    <li><a href="careers.html">الوظائف</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="#" class="lang-switch">EN</a>
-                <button class="search-icon" aria-label="بحث">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 
-                        6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
-                        4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 
-                        9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-                    </svg>
-                </button>
-            </div>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;"></a>
+      </div>
+      <nav>
+        <button class="menu-toggle" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="companies.html">شركاتنا</a></li>
+          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="careers.html">الوظائف</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="lang-switch">EN</a>
+        <button class="search-icon" aria-label="بحث">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 
+              6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
+              4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 
+              9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner">
+      <div class="hero-overlay">
+        <h1>شركة النصيان القابضة</h1>
+      </div>
+      <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
+    </section>
+
+    <section id="overview" class="overview-section">
+      <div class="container">
+        <h2>لمحة سريعة</h2>
+        <div class="overview-grid">
+          <div class="overview-item"><h3>1967</h3><p>نبتكر منذ</p></div>
+          <div class="overview-item"><h3>5 آلاف+</h3><p>موظف مبدع</p></div>
+          <div class="overview-item"><h3>27+</h3><p>موقع داخل السعودية</p></div>
+          <div class="overview-item"><h3>14+</h3><p>شركة حكومية وخاصة</p></div>
         </div>
-    </header>
+        <a href="about.html" class="btn btn-primary">حول شركة النصيان القابضة</a>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <section class="hero">
-            <img src="img/banner.jpeg" alt="بانر رئيسي - مال وأعمال" class="hero-banner">
-            <div class="hero-overlay">
-                <h1>شركة النصيان القابضة</h1>
-                <p>مستقبل واعد، بإرث عريق</p>
-            </div>
-            <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
-        </section>
-
-        <section id="overview" class="overview-section">
-            <div class="container">
-                <h2>لمحة سريعة</h2>
-                <div class="overview-grid">
-                    <div class="overview-item">
-                        <h3>1967</h3>
-                        <p>نبتكر منذ</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>5 آلاف+</h3>
-                        <p>موظف مبدع</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>27+</h3>
-                        <p>موقع داخل السعودية</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>14+</h3>
-                        <p>شركة حكومية وخاصة</p>
-                    </div>
-                </div>
-                <a href="about.html" class="btn btn-primary">حول شركة النصيان القابضة</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-columns">
-                <div class="footer-col">
-                    <h4>اتصل بنا</h4>
-                    <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
-                    <p>الهاتف: <a href="tel:+966138145555">5555-814-13-966+</a></p>
-                    <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
-                </div>
-                <div class="footer-col">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#">الشروط والأحكام</a></li>
-                        <li><a href="#">إخلاء المسؤولية</a></li>
-                        <li><a href="#">سياسة الخصوصية</a></li>
-                        <li><a href="#">خريطة الموقع</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>تابعنا</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook"><svg>...</svg></a>
-                        <a href="#" aria-label="Twitter"><svg>...</svg></a>
-                        <a href="#" aria-label="LinkedIn"><svg>...</svg></a>
-                        <a href="#" aria-label="Instagram"><svg>...</svg></a>
-                    </div>
-                    <img src="img/vision_2030.png" alt="رؤية السعودية 2030" class="vision-logo" style="width:100px; margin-top:15px;" />
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
-            </div>
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>اتصل بنا</h4>
+          <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
+          <p>الهاتف: <a href="tel:+966138145555">+966-13-814-5555</a></p>
+          <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">إخلاء المسؤولية</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">خريطة الموقع</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>تابعنا</h4>
+          <div class="social-icons">
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+          </div>
+          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width: 100px; margin-top: 15px;" />
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
