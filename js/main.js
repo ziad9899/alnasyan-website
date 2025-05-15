@@ -1,22 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+    const menuToggle = document.querySelector(".menu-toggle"); // زر ☰
+    const sidebar = document.querySelector(".sidebar");        // القائمة الجانبية
+    const closeBtn = document.querySelector(".close-btn");     // زر الإغلاق ×
 
-    if (menuToggle && navMenu) {
-        // فتح / إغلاق القائمة عند الضغط على زر التبديل
+    // فتح القائمة الجانبية
+    if (menuToggle && sidebar) {
         menuToggle.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-        });
-
-        // إغلاق القائمة تلقائيًا بعد اختيار أي عنصر (مهم للجوال)
-        navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", function () {
-                navMenu.classList.remove("active");
-            });
+            sidebar.classList.add("active");
         });
     }
 
-    // التمرير السلس عند الضغط على روابط داخلية (anchor links)
+    // إغلاق القائمة عند الضغط على زر ×
+    if (closeBtn && sidebar) {
+        closeBtn.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+        });
+    }
+
+    // إغلاق القائمة عند الضغط على أي رابط داخل القائمة
+    sidebar.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+        });
+    });
+
+    // إغلاق القائمة إذا ضغط خارجها (اختياري)
+    document.addEventListener("click", function (e) {
+        if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+            sidebar.classList.remove("active");
+        }
+    });
+
+    // التمرير السلس عند الضغط على روابط داخلية (anchor)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
