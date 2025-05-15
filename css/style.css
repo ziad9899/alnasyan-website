@@ -53,7 +53,6 @@ header .container {
   height: 50px;
 }
 
-/* زر الثلاث خطوط */
 .menu-toggle {
   display: block;
   background: none;
@@ -64,7 +63,6 @@ header .container {
   margin-left: 15px;
 }
 
-/* إخفاء قائمة التنقل العلوية عند الجوال */
 .nav-menu {
   list-style: none;
   padding: 0;
@@ -86,12 +84,10 @@ header .container {
   color: #d79c5a;
 }
 
-/* إخفاء البحث واللغة */
 .header-actions {
   display: none;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -142,7 +138,6 @@ header .container {
   background-color: transparent;
 }
 
-/* Quote Section */
 .intro-quote blockquote {
   font-size: 1.2em;
   color: #0b2f24;
@@ -156,7 +151,6 @@ header .container {
   line-height: 2;
 }
 
-/* Overview Section */
 .overview-section {
   padding: 60px 20px;
   background: #fff;
@@ -189,10 +183,16 @@ header .container {
   color: #333;
 }
 
-/* أقسام */
+.departments {
+  text-align: center;
+  margin: 50px auto;
+}
+
 .departments ul {
   list-style: none;
   padding: 0;
+  display: inline-block;
+  text-align: right;
 }
 
 .departments li {
@@ -212,33 +212,49 @@ header .container {
   color: #0b2f24;
 }
 
-/* المؤسسون */
-.founders .founder {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 350px;
-  text-align: center;
+.founders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
 }
 
-.founders .founder img {
+.founder-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card img {
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-.founders .founder h3 {
+.founder-card h3 {
+  font-size: 1.4em;
   color: #0b2f24;
-  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.founder-card p {
+  font-size: 1em;
+  color: #555;
   margin-bottom: 10px;
 }
 
-.founders .founder p {
-  color: #333;
-  font-size: 1em;
-  line-height: 1.8;
+.founder-card .learn-more {
+  color: #0b2f24;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-/* Footer */
 footer {
   background-color: #333333;
   color: #cccccc;
@@ -297,7 +313,6 @@ footer {
   font-size: 0.9em;
 }
 
-/* Sidebar Styles */
 .sidebar {
   position: fixed;
   top: 0;
@@ -346,7 +361,6 @@ footer {
   color: #d79c5a;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .nav-menu {
     display: none !important;
@@ -359,5 +373,10 @@ footer {
 
   .departments ul li ul {
     padding-right: 10px;
+  }
+
+  .overview-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
