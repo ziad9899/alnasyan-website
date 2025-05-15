@@ -1,425 +1,156 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شركة النصيان القابضة</title>
-    <style>
-        /* تنسيقات عامة */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f5f5f5;
-            line-height: 1.8;
-        }
-
-        /* الهيدر */
-        header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
-        /* زر القائمة */
-        .menu-toggle {
-            display: block;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .menu-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: #333;
-            margin: 4px 0;
-            transition: 0.3s;
-        }
-
-        /* القائمة الجانبية */
-        .sidebar {
-            position: fixed;
-            right: -300px;
-            top: 0;
-            width: 280px;
-            height: 100%;
-            background: #fff;
-            box-shadow: -2px 0 15px rgba(0,0,0,0.1);
-            transition: 0.4s;
-            z-index: 999;
-            padding: 40px 20px;
-        }
-
-        .sidebar.active {
-            right: 0;
-        }
-
-        .close-sidebar {
-            position: absolute;
-            left: 15px;
-            top: 15px;
-            font-size: 30px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: #333;
-        }
-
-        .sidebar ul {
-            list-style: none;
-        }
-
-        .sidebar li {
-            margin: 15px 0;
-        }
-
-        .sidebar a {
-            color: #333;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.3s;
-            display: block;
-            padding: 8px;
-        }
-
-        .sidebar a:hover {
-            color: #2ecc71;
-            transform: translateX(-10px);
-        }
-
-        /* المحتوى الرئيسي */
-        main {
-            margin-top: 80px;
-            padding: 20px;
-            transition: 0.4s;
-        }
-
-        /* أقسام المحتوى */
-        .hero {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            margin-bottom: 40px;
-        }
-
-        .hero-banner {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%, -50%);
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-overlay h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .intro-quote {
-            background: #fff;
-            padding: 40px 0;
-            margin: 40px 0;
-        }
-
-        blockquote {
-            font-size: 1.4em;
-            color: #2c3e50;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .overview-section {
-            background: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        .overview-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .overview-item {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .founders {
-            padding: 50px 0;
-        }
-
-        .founder-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        /* الفوتر */
-        footer {
-            background: #2c3e50;
-            color: #fff;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer-columns {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 20px;
-            color: #2ecc71;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #fff;
-            font-size: 24px;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #40576b;
-        }
-
-        /* تصميم متجاوب */
-        @media (min-width: 992px) {
-            .menu-toggle {
-                display: none;
-            }
-
-            .sidebar {
-                right: 0;
-                width: 250px;
-                background: #2ecc71;
-                box-shadow: none;
-            }
-
-            .sidebar a {
-                color: #fff;
-            }
-
-            .sidebar a:hover {
-                color: #dff9fb;
-            }
-
-            .close-sidebar {
-                display: none;
-            }
-
-            main {
-                margin-right: 250px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-overlay h1 {
-                font-size: 2em;
-            }
-
-            blockquote {
-                font-size: 1.2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة النصيان القابضة</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.jpeg" alt="شعار الشركة"></a>
-            </div>
-            <nav>
-                <button class="menu-toggle" aria-label="القائمة" onclick="toggleSidebar()">
-                    <span></span><span></span><span></span>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <div class="sidebar" id="sidebar">
-        <button class="close-sidebar" onclick="toggleSidebar()">×</button>
-        <ul>
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="about.html">عن الشركة</a></li>
-            <li><a href="companies.html">شركاتنا</a></li>
-            <li><a href="sustainability.html">الاستدامة</a></li>
-            <li><a href="media.html">المركز الإعلامي</a></li>
-            <li><a href="contact.html">اتصل بنا</a></li>
-            <li><a href="careers.html">الوظائف</a></li>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;"></a>
+      </div>
+      <nav>
+        <button class="menu-toggle" aria-label="القائمة" onclick="toggleSidebar()">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="companies.html">شركاتنا</a></li>
+          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="careers.html">الوظائف</a></li>
         </ul>
+      </nav>
     </div>
+  </header>
 
-    <main>
-        <section class="hero">
-            <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner">
-            <div class="hero-overlay">
-                <h1>شركة النصيان القابضة</h1>
-                <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
-            </div>
-        </section>
+  <div class="sidebar" id="sidebar">
+    <button class="close-sidebar" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">شركاتنا</a></li>
+      <li><a href="sustainability.html">الاستدامة</a></li>
+      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="careers.html">الوظائف</a></li>
+    </ul>
+  </div>
 
-        <section class="intro-quote">
-            <div class="container">
-                <blockquote>
-                    "في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل.<br>
-                    نحن نبني الأفكار، نُطوّر الإمكانيات، ونحوّل الطموحات إلى واقع يتجاوز حدود المال."
-                </blockquote>
-            </div>
-        </section>
+  <main>
+    <section class="hero">
+      <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner">
+      <div class="hero-overlay">
+        <h1>شركة النصيان القابضة</h1>
+      </div>
+      <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
+    </section>
 
-        <section id="overview" class="overview-section">
-            <div class="container">
-                <h2>لمحة سريعة</h2>
-                <div class="overview-grid">
-                    <div class="overview-item">
-                        <h3>2015</h3>
-                        <p>تاريخ التأسيس</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>14</h3>
-                        <p>شركة حكومية وخاصة</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>27+</h3>
-                        <p>موقع داخل السعودية</p>
-                    </div>
-                    <div class="overview-item">
-                        <h3>5000+</h3>
-                        <p>موظف مبدع</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="intro-quote">
+      <div class="container">
+        <blockquote>
+          في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل.<br>
+          نحن نبني الأفكار، نُطوّر الإمكانيات، ونحوّل الطموحات إلى واقع يتجاوز حدود المال.
+        </blockquote>
+      </div>
+    </section>
 
-        <section class="founders">
-            <div class="container">
-                <div class="founder-card">
-                    <img src="img/founder1.jpg" alt="عبدالله النصيان">
-                    <h3>عبدالله النصيان</h3>
-                    <p>عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً. كان من أوائل من واجه التحديات وترك بصمة لا تُنسى.</p>
-                </div>
-                <div class="founder-card">
-                    <img src="img/founder2.jpg" alt="علي النصيان">
-                    <h3>علي النصيان</h3>
-                    <p>علي النصيان، حفظه الله، واصل المسيرة بخبرة واسعة، وحضور فعّال، ورؤية راسخة.</p>
-                </div>
-                <div class="founder-card">
-                    <img src="img/founder3.jpg" alt="عبدالرحمن النصيان">
-                    <h3>عبدالرحمن النصيان</h3>
-                    <p>عبدالرحمن النصيان نقل الشركة إلى مستوى جديد، فأسس لها هوية واضحة وهيكل متطور.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-columns">
-                <div class="footer-col">
-                    <h4>اتصل بنا</h4>
-                    <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
-                    <p>الهاتف: <a href="tel:+966138145555">+966-13-814-5555</a></p>
-                    <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
-                </div>
-                <div class="footer-col">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="#">الشروط والأحكام</a></li>
-                        <li><a href="#">إخلاء المسؤولية</a></li>
-                        <li><a href="#">سياسة الخصوصية</a></li>
-                        <li><a href="#">خريطة الموقع</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>تابعنا</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                    <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width: 100px; margin-top: 15px;">
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
-            </div>
+    <section id="overview" class="overview-section">
+      <div class="container">
+        <h2>لمحة سريعة</h2>
+        <div class="overview-grid">
+          <div class="overview-item"><h3>2015</h3><p>تاريخ التأسيس</p></div>
+          <div class="overview-item"><h3>14</h3><p>شركة حكومية وخاصة</p></div>
+          <div class="overview-item"><h3>27+</h3><p>موقع داخل السعودية</p></div>
+          <div class="overview-item"><h3>5000+</h3><p>موظف مبدع</p></div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-            
-            if (sidebar.classList.contains('active')) {
-                document.addEventListener('click', closeSidebarOnClickOutside);
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.removeEventListener('click', closeSidebarOnClickOutside);
-                document.body.style.overflow = 'auto';
-            }
-        }
+    <section class="departments">
+      <div class="container">
+        <h2>الأقسام</h2>
+        <ul>
+          <li>المال</li>
+          <li>مال 1</li>
+          <li>مال 2</li>
+          <li>أعمال</li>
+          <li>أعمال 1</li>
+          <li>أعمال 2</li>
+        </ul>
+      </div>
+    </section>
 
-        function closeSidebarOnClickOutside(e) {
-            const sidebar = document.getElementById('sidebar');
-            const toggleButton = document.querySelector('.menu-toggle');
-            
-            if (!sidebar.contains(e.target) && !toggleButton.contains(e.target)) {
-                sidebar.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                document.removeEventListener('click', closeSidebarOnClickOutside);
-            }
-        }
-    </script>
+    <section class="founders">
+      <div class="container">
+        <div class="founder">
+          <img src="img/founder1.jpg" alt="عبدالله النصيان">
+          <h3>عبدالله النصيان</h3>
+          <p>
+            عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً... أسساً سار عليها كثيرون من بعده.
+          </p>
+        </div>
+        <div class="founder">
+          <img src="img/founder2.jpg" alt="علي النصيان">
+          <h3>علي النصيان</h3>
+          <p>
+            علي النصيان، حفظه الله، واصل مسيرة التجارة... بيده وبنفس الروح الأولى.
+          </p>
+        </div>
+        <div class="founder">
+          <img src="img/founder3.jpg" alt="عبدالرحمن النصيان">
+          <h3>عبدالرحمن النصيان</h3>
+          <p>
+            عبدالرحمن النصيان هو من نقل هذا الكيان من عمل تقليدي... يقود الشركة بعين المؤسس ويد العامل.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>اتصل بنا</h4>
+          <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
+          <p>الهاتف: <a href="tel:+966138145555">+966-13-814-5555</a></p>
+          <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">إخلاء المسؤولية</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+            <li><a href="#">خريطة الموقع</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>تابعنا</h4>
+          <div class="social-icons">
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+            <a href="#"><svg>...</svg></a>
+          </div>
+          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width: 100px; margin-top: 15px;" />
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
