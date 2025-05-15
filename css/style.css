@@ -63,6 +63,15 @@ header .container {
   margin-left: 15px;
 }
 
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
 .nav-menu {
   list-style: none;
   padding: 0;
@@ -318,14 +327,14 @@ footer {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 100%;
   height: 100%;
   background-color: #0b2f24;
   color: #ffffff;
   padding: 40px 20px;
   z-index: 1500;
-  transition: left 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,7 +342,7 @@ footer {
 }
 
 .sidebar.active {
-  left: 0;
+  right: 0;
 }
 
 .sidebar .close-sidebar {
@@ -344,7 +353,7 @@ footer {
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
 }
 
 .sidebar ul {
@@ -361,7 +370,7 @@ footer {
 .sidebar ul li a {
   color: #ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   display: block;
   transition: color 0.3s;
 }
