@@ -1,14 +1,20 @@
+@font-face {
+  font-family: 'DoranClassic';
+  src: url('../fonts/DoranClassicDotsNoEn-Medium.ttf') format('truetype');
+}
+
 body {
-  font-family: 'DoranArabic', Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'DoranClassic', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
   color: #333333;
-  direction: rtl;
   line-height: 1.8;
+  font-size: 18px;
+  direction: rtl;
 }
 
+/* الحاوية الرئيسية */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -16,19 +22,23 @@ body {
   padding: 0 15px;
 }
 
+/* الروابط */
 a {
   text-decoration: none;
-  color: #0b2f24;
+  color: #006400;
 }
+
 a:hover {
   color: #d79c5a;
 }
 
+/* الصور */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* الهيدر */
 header {
   background-color: #0b2f24;
   color: #ffffff;
@@ -37,7 +47,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -45,214 +55,172 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+
 header .logo img {
   height: 50px;
 }
-header nav .menu-toggle {
-  display: none;
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}
+
+/* القائمة الجانبية */
+.sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #0b2f24;
+  color: #fff;
+  transition: right 0.3s ease-in-out;
+  z-index: 1500;
+  padding: 30px 20px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  font-size: 20px;
+  display: block;
+  font-weight: bold;
+}
+
+/* زر الإغلاق */
+.sidebar .close-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
   font-size: 24px;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
 }
-header nav .nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-header nav .nav-menu li a {
-  color: #ffffff;
-  font-weight: bold;
-}
-header nav .nav-menu li a:hover {
-  color: #d79c5a;
-}
-.header-actions a,
-.header-actions button {
-  color: #ffffff;
-  margin-left: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
 
-/* Hero */
+/* القسم الرئيسي */
 .hero {
   position: relative;
   height: 100vh;
-  background-color: #0b2f24;
-  padding-top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
+  padding-top: 70px;
+  background-color: #0b2f24;
 }
+
 .hero-banner {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  top: 0;
-  left: 0;
   z-index: -2;
 }
+
 .hero-overlay {
   position: absolute;
-  background: rgba(11, 47, 36, 0.7);
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 47, 36, 0.7);
   z-index: -1;
 }
+
 .hero h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   color: #d79c5a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* زر النزول */
 .scroll-down-btn {
   position: absolute;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  color: #fff;
-  border: 2px solid #fff;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: bold;
   background-color: transparent;
 }
 
-/* Sections */
-.overview-section,
-.departments-section,
-.founders-section {
-  padding: 60px 20px;
-  background: #fff;
-  text-align: center;
-}
-.overview-grid,
-.departments,
-.founders {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.overview-item,
-.department-box,
-.founder-card {
-  background: #f0f0f0;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 300px;
-  text-align: center;
-}
-.overview-item h3,
-.department-box h3 {
-  font-size: 2em;
-  color: #d79c5a;
-}
-.founder-card img {
-  width: 100%;
-  border-radius: 12px;
-}
-.founder-card h4 {
-  margin: 10px 0 5px;
+.scroll-down-btn:hover {
+  background-color: #ffffff;
+  color: #0b2f24;
 }
 
-/* Buttons */
-.btn {
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s ease;
-  display: inline-block;
-}
-.btn-primary {
-  background-color: #0b2f24;
-  color: #fff;
-  border: 2px solid #0b2f24;
-}
-.btn-primary:hover {
-  background-color: #09442f;
-  border-color: #09442f;
-}
-
-/* Footer */
+/* الفوتر */
 footer {
-  background: #333;
+  background-color: #333;
   color: #ccc;
   padding: 40px 0 20px;
 }
+
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  margin-bottom: 30px;
 }
+
 .footer-col h4 {
-  color: #fff;
+  color: #ffffff;
+  font-size: 1.4em;
+  margin-bottom: 15px;
   border-bottom: 1px solid #d79c5a;
   padding-bottom: 8px;
-  font-size: 1.4em;
 }
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-.footer-col ul li {
-  margin: 8px 0;
-}
+
 .footer-col a {
   color: #ccc;
 }
+
 .footer-col a:hover {
   color: #d79c5a;
 }
-.social-icons a {
-  color: #fff;
-  font-size: 1.5em;
-  margin-right: 10px;
-}
+
+/* عناصر مرئية إضافية */
 .vision-logo {
   width: 100px;
   margin-top: 15px;
 }
-.copyright {
-  text-align: center;
-  border-top: 1px solid #555;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 0.9em;
+
+/* نصوص داخل الأقسام */
+.overview-section h2,
+.departments-section h2,
+.founders-section h2 {
+  font-size: 2.2em;
+  color: #0b2f24;
+  margin-bottom: 30px;
 }
 
-/* Responsive */
+/* استجابة الجوال */
 @media (max-width: 768px) {
-  header nav .menu-toggle {
-    display: block;
-  }
-  header nav .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: #0b2f24;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-  }
-  header nav .nav-menu.active {
-    display: flex;
-  }
-  header nav .nav-menu li {
-    text-align: center;
-    margin: 10px 0;
-  }
   .hero h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 }
-
