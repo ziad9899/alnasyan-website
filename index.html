@@ -13,6 +13,9 @@
         <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;"></a>
       </div>
       <nav>
+        <button class="menu-toggle" aria-label="القائمة" onclick="toggleSidebar()">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav-menu">
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
@@ -25,6 +28,20 @@
       </nav>
     </div>
   </header>
+
+  <!-- Modal Sidebar -->
+  <div class="modal-sidebar" id="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">شركاتنا</a></li>
+      <li><a href="sustainability.html">الاستدامة</a></li>
+      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="careers.html">الوظائف</a></li>
+    </ul>
+  </div>
 
   <main>
     <section class="hero">
@@ -130,5 +147,11 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
