@@ -1,6 +1,15 @@
+/* استيراد الخط الجديد */
+@font-face {
+  font-family: 'DoranClassic';
+  src: url('../fonts/DoranClassicDotsNoEn-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'DoranClassic', 'Arial', sans-serif;
+    font-size: 1.1em;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -297,7 +306,7 @@ footer {
         top: 70px;
         left: 0;
         width: 100%;
-        background-color: #0d2f1f; /* نفس اللون الغامق */
+        background-color: #0d2f1f;
         padding: 10px 0;
     }
     header nav .nav-menu.active {
@@ -318,4 +327,3 @@ footer {
         font-size: 1.2em;
     }
 }
-
