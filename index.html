@@ -62,6 +62,31 @@
         object-fit: contain;
       }
     }
+    .overview-section, .founders-section, .departments-section {
+      padding: 60px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .overview-grid, .departments, .founders {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .overview-item, .department-box, .founder-card {
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+    }
+    .founder-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .founder-card h4 {
+      margin: 10px 0 5px;
+    }
   </style>
 </head>
 <body>
@@ -87,10 +112,7 @@
         <a href="#" class="lang-switch">EN</a>
         <button class="search-icon" aria-label="بحث">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 
-              6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 
-              4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 
-              9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           </svg>
         </button>
       </div>
@@ -106,16 +128,60 @@
       <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
     </section>
 
-    <section id="overview" class="overview-section">
+    <section class="overview-section" id="overview">
       <div class="container">
-        <h2>لمحة سريعة</h2>
+        <h2>لمحة عن الشركة</h2>
+        <p>“في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل. نحن نبني الأفكار، نُطوّر الإمكانيات، ونحوّل الطموحات إلى واقع يتجاوز حدود المال".</p>
         <div class="overview-grid">
-          <div class="overview-item"><h3>1967</h3><p>نبتكر منذ</p></div>
+          <div class="overview-item"><h3>2015-04-14</h3><p>تاريخ التأسيس</p></div>
           <div class="overview-item"><h3>5 آلاف+</h3><p>موظف مبدع</p></div>
           <div class="overview-item"><h3>27+</h3><p>موقع داخل السعودية</p></div>
           <div class="overview-item"><h3>14+</h3><p>شركة حكومية وخاصة</p></div>
         </div>
-        <a href="about.html" class="btn btn-primary">حول شركة النصيان القابضة</a>
+      </div>
+    </section>
+
+    <section class="departments-section">
+      <div class="container">
+        <h2>الأقسام</h2>
+        <div class="departments">
+          <div class="department-box">
+            <h3>المال</h3>
+            <p><a href="#">أعمال 1</a></p>
+            <p><a href="#">أعمال 2</a></p>
+          </div>
+          <div class="department-box">
+            <h3>أعمال</h3>
+            <p><a href="#">عمل 1</a></p>
+            <p><a href="#">عمل 2</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="founders-section">
+      <div class="container">
+        <h2>ملاك الشركة</h2>
+        <div class="founders">
+          <div class="founder-card">
+            <img src="img/founder1.jpeg" alt="عبدالله النصيان">
+            <h4>عبدالله النصيان</h4>
+            <p>رئيس مجلس الإدارة</p>
+            <p>بدأ رحلته في التجارة قبل أكثر من ستين عاماً، حين كانت السوق تخط أولى خطواتها...</p>
+          </div>
+          <div class="founder-card">
+            <img src="img/founder2.jpeg" alt="علي النصيان">
+            <h4>علي النصيان</h4>
+            <p>عضو إداري</p>
+            <p>واصل مسيرة التجارة بعزيمة، متنقلاً بين مجالات متعددة مكتسباً خبرة وعلاقات راسخة...</p>
+          </div>
+          <div class="founder-card">
+            <img src="img/founder3.jpeg" alt="عبدالرحمن النصيان">
+            <h4>عبدالرحمن النصيان</h4>
+            <p>المدير العام</p>
+            <p>نقل الكيان من عمل تقليدي إلى شركة رسمية متكاملة، بهوية واضحة وطريق مرسوم...</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
