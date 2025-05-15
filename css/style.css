@@ -142,6 +142,20 @@ header .container {
   background-color: transparent;
 }
 
+/* Quote Section */
+.intro-quote blockquote {
+  font-size: 1.2em;
+  color: #0b2f24;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  border-right: 5px solid #d79c5a;
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: center;
+  line-height: 2;
+}
+
 /* Overview Section */
 .overview-section {
   padding: 60px 20px;
@@ -165,58 +179,63 @@ header .container {
 }
 
 .overview-item h3 {
-  font-size: 2em;
-  color: #d79c5a;
+  font-size: 2.5em;
+  color: #0b2f24;
   margin-bottom: 10px;
 }
 
+.overview-item p {
+  font-size: 1.1em;
+  color: #333;
+}
+
 /* أقسام */
-.departments-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+.departments ul {
+  list-style: none;
+  padding: 0;
 }
 
-.departments {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.departments li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.department-box {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 300px;
+.departments li ul {
+  margin-top: 5px;
+  padding-right: 15px;
+}
+
+.departments li ul li {
+  font-size: 1em;
+  font-weight: normal;
+  color: #0b2f24;
 }
 
 /* المؤسسون */
-.founders-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.founders {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.founder-card {
-  background: #f0f0f0;
+.founders .founder {
+  background: #f5f5f5;
+  padding: 20px;
   border-radius: 10px;
-  padding: 15px;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
 }
 
-.founder-card img {
-  width: 100%;
-  border-radius: 12px;
+.founders .founder img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.founders .founder h3 {
+  color: #0b2f24;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.founders .founder p {
+  color: #333;
+  font-size: 1em;
+  line-height: 1.8;
 }
 
 /* Footer */
@@ -331,5 +350,14 @@ footer {
 @media (max-width: 768px) {
   .nav-menu {
     display: none !important;
+  }
+
+  .founders {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .departments ul li ul {
+    padding-right: 10px;
   }
 }
