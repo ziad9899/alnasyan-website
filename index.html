@@ -5,19 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>شركة النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;"></a>
+        <a href="index.html">
+          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;">
+        </a>
       </div>
       <nav>
-        <button class="menu-toggle" aria-label="القائمة" onclick="toggleSidebar()">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="sidebar.html">
+          <button class="menu-toggle" aria-label="القائمة">&#9776;</button>
+        </a>
         <ul class="nav-menu">
-          <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
           <li><a href="companies.html">شركاتنا</a></li>
           <li><a href="sustainability.html">الاستدامة</a></li>
@@ -28,20 +38,6 @@
       </nav>
     </div>
   </header>
-
-  <!-- Modal Sidebar -->
-  <div class="modal-sidebar" id="sidebar">
-    <button class="close-btn" onclick="toggleSidebar()">×</button>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">عن الشركة</a></li>
-      <li><a href="companies.html">شركاتنا</a></li>
-      <li><a href="sustainability.html">الاستدامة</a></li>
-      <li><a href="media.html">المركز الإعلامي</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-      <li><a href="careers.html">الوظائف</a></li>
-    </ul>
-  </div>
 
   <main>
     <section class="hero">
@@ -108,7 +104,7 @@
         <div class="founder-card">
           <img src="img/founder3.jpg" alt="عبدالرحمن النصيان">
           <h3>عبدالرحمن النصيان</h3>
-          <p>عبدالرحمن النصيان هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة، بهوية واضحة...</p>
+          <p>عبدالرحمن النصيان هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة، بهوية واضحة وطريق مرسوم...</p>
         </div>
       </div>
     </section>
@@ -137,9 +133,9 @@
           <div class="social-icons">
             <a href="#">فيسبوك</a>
             <a href="#">تويتر</a>
-            <a href="#">إنستغرام</a>
+            <a href="#">إنستقرام</a>
           </div>
-          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" class="vision-logo" />
+          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width: 100px; margin-top: 15px;" />
         </div>
       </div>
       <div class="copyright">
@@ -147,11 +143,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
