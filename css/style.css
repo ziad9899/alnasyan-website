@@ -310,3 +310,51 @@ footer {
     font-size: 2.2em;
   }
 }
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 260px;
+  height: 100%;
+  background-color: #0b2f24;
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  z-index: 1500;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar .close-sidebar {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 26px;
+  float: left;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  color: #d79c5a;
+}
