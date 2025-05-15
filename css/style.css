@@ -53,15 +53,18 @@ header .container {
   height: 50px;
 }
 
+/* زر الثلاث خطوط */
 .menu-toggle {
-  display: none;
+  display: block;
   background: none;
   border: none;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
+  margin-left: 15px;
 }
 
+/* إخفاء قائمة التنقل العلوية عند الجوال */
 .nav-menu {
   list-style: none;
   padding: 0;
@@ -71,10 +74,6 @@ header .container {
 
 .nav-menu li {
   margin-right: 25px;
-}
-
-.nav-menu li:last-child {
-  margin-right: 0;
 }
 
 .nav-menu li a {
@@ -279,37 +278,6 @@ footer {
   font-size: 0.9em;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #0b2f24;
-    padding: 10px 0;
-  }
-  .nav-menu.active {
-    display: flex;
-  }
-  .nav-menu li {
-    margin: 0;
-    text-align: center;
-  }
-  .nav-menu li a {
-    display: block;
-    padding: 12px 15px;
-  }
-
-  .hero h1 {
-    font-size: 2.2em;
-  }
-}
 /* Sidebar Styles */
 .sidebar {
   position: fixed;
@@ -357,4 +325,11 @@ footer {
 
 .sidebar ul li a:hover {
   color: #d79c5a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none !important;
+  }
 }
