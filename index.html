@@ -1,265 +1,185 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>شركة النصيان القابضة</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    header {
-      background-color: #0b2f24;
-      color: #ffffff;
-      padding: 8px 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .menu-toggle {
-      background: none;
-      border: none;
-      font-size: 30px;
-      color: #fff;
-      cursor: pointer;
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-menu {
-        display: none;
-      }
-    }
-
-    .side-menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #0b2f24;
-      padding-top: 60px;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-
-    .side-menu.open {
-      display: block;
-      transform: translateX(0);
-    }
-
-    .side-menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .side-menu li {
-      border-bottom: 1px solid #ffffff22;
-    }
-
-    .side-menu a {
-      display: block;
-      padding: 15px 20px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .hero {
-      position: relative;
-      height: 300px;
-    }
-
-    .hero-banner {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(11, 47, 36, 0.6);
-    }
-
-    .scroll-down-btn {
-      display: none;
-    }
-
-    .section-title {
-      font-size: 60px;
-      color: #0b2f24;
-      text-align: center;
-      margin: 60px 0 30px;
-    }
-
-    .department-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .department-card {
-      background-color: #f4f4f4;
-      border-radius: 10px;
-      padding: 20px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .department-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .department-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 15px;
-    }
-
-    .department-card h3 {
-      font-size: 20px;
-      color: #0b2f24;
-    }
-
-    footer .copyright {
-      text-align: center;
-      padding: 20px 10px 10px;
-      font-size: 14px;
-      background-color: #333;
-      color: #ccc;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العثمان القابضة | AlOthman Holding</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-  <!-- القائمة الجانبية للجوال -->
-  <div class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">عن الشركة</a></li>
-      <li><a href="companies.html">مال</a></li>
-      <li><a href="sustainability.html">أعمال</a></li>
-      <li><a href="media.html">المستثمرين</a></li>
-      <li><a href="contact.html">اتصل بنا</a></li>
-    </ul>
-  </div>
-
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 40px;" />
-        </a>
-      </div>
-      <nav>
-        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-        <ul class="nav-menu">
-          <li><a href="index.html">الرئيسية</a></li>
-          <li><a href="about.html">عن الشركة</a></li>
-          <li><a href="companies.html">مال</a></li>
-          <li><a href="sustainability.html">أعمال</a></li>
-          <li><a href="media.html">المستثمرين</a></li>
-          <li><a href="contact.html">اتصل بنا</a></li>
-        </ul>
-      </nav>
+    <!-- شريط المعلومات العلوي -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span><i class="fas fa-envelope"></i> info@al-othman.com</span>
+                <span><i class="fas fa-phone"></i> +966-1-3814-5548</span>
+                <a href="#" class="lang-switch">EN</a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <img src="img/banner.jpeg" alt="بانر مال وأعمال" class="hero-banner" />
-      <div class="hero-overlay"></div>
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="assets/images/logo.png" alt="AlOthman Holding">
+                    <div class="logo-text">
+                        <h1>العثمان القابضة</h1>
+                        <p>AlOthman Holding</p>
+                    </div>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="active">الرئيسية</a></li>
+                        <li><a href="#">عن المجموعة</a></li>
+                        <li><a href="#">أعمالنا</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                        <li><a href="#">الأخبار</a></li>
+                        <li><a href="#">التوظيف</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية للجوال -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/images/logo.png" alt="AlOthman Holding">
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">الرئيسية</a></li>
+                <li><a href="#">عن المجموعة</a></li>
+                <li><a href="#">أعمالنا</a></li>
+                <li><a href="#">الاستدامة</a></li>
+                <li><a href="#">الأخبار</a></li>
+                <li><a href="#">التوظيف</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>© 2023 العثمان القابضة. جميع الحقوق محفوظة</p>
+        </div>
+    </aside>
+
+    <!-- قسم البطل -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>العثمان القابضة</h2>
+                <p>شركة سعودية مساهمة مقفلة بارزة ومملوكة عائلياً. تأسست الشركة القابضة في عام 1967، وتدير مجموعة متنوعة من العلامات التجارية الرائدة في قطاعات متعددة حتى باتت أسماء معروفة على نطاق واسع.</p>
+                
+                <div class="quick-facts">
+                    <div class="fact-item">
+                        <span class="fact-number">1967</span>
+                        <span class="fact-text">سنة التأسيس</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-number">14</span>
+                        <span class="fact-text">شركة حكومية وخاصة</span>
+                    </div>
+                    <div class="fact-item">
+                        <span class="fact-number">27</span>
+                        <span class="fact-text">موقع داخل السعودية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="intro-quote">
-      <div class="container">
-        <blockquote>
-          في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل.<br />
-          نحن نبني الأفكار، نُطوّر الإمكانيات، ونحوّل الطموحات إلى واقع يتجاوز حدود المال.
-        </blockquote>
-      </div>
+    <!-- قسم الخط الزمني -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">رحلة العثمان</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1967</div>
+                    <div class="timeline-content">
+                        <h3>تأسيس الشركة</h3>
+                        <p>تأسيس شركة محمد عبدالله العثمان للنجارة والمقاولات (MOC) في الخبر كمقاول عام بخدمات متكاملة.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">1977</div>
+                    <div class="timeline-content">
+                        <h3>مرحلة التوسع</h3>
+                        <p>توسعة الأعمال لتشمل قطاعات جديدة وبدء مرحلة التأسيس للشركة القابضة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="overview" class="overview-section">
-      <div class="container">
-        <h2>لمحة سريعة</h2>
-        <div class="overview-grid">
-          <div class="overview-item"><h3>2015</h3><p>تاريخ التأسيس</p></div>
-          <div class="overview-item"><h3>14</h3><p>شركة حكومية وخاصة</p></div>
-          <div class="overview-item"><h3>27+</h3><p>موقع داخل السعودية</p></div>
-          <div class="overview-item"><h3>5000+</h3><p>موظف مبدع</p></div>
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>العثمان القابضة</h3>
+                    <p>شركة رائدة في مجال الأعمال منذ أكثر من نصف قرن، نقدم حلولاً مبتكرة وخدمات عالية الجودة.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#">لمحة عامة</a></li>
+                        <li><a href="#">الاستدامة</a></li>
+                        <li><a href="#">التزامنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>أعمالنا</h3>
+                    <ul>
+                        <li><a href="#">أعمالنا</a></li>
+                        <li><a href="#">التوظيف</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> طريق الملك سعود، الخبر</p>
+                        <p><i class="fas fa-phone"></i> +966-1-3814-5548</p>
+                        <p><i class="fas fa-envelope"></i> info@al-othman.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 العثمان القابضة. جميع الحقوق محفوظة</p>
+                <div class="legal-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <section class="departments">
-      <div class="container">
-        <h2 class="section-title">الأقسام</h2>
-        <div class="department-grid">
-          <div class="department-card">
-            <img src="img/icon1.png" alt="أيقونة" />
-            <h3>مال 1</h3>
-          </div>
-          <div class="department-card">
-            <img src="img/icon2.png" alt="أيقونة" />
-            <h3>مال 2</h3>
-          </div>
-          <div class="department-card">
-            <img src="img/icon3.png" alt="أيقونة" />
-            <h3>أعمال 1</h3>
-          </div>
-          <div class="department-card">
-            <img src="img/icon4.png" alt="أيقونة" />
-            <h3>أعمال 2</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="founders">
-      <div class="container">
-        <div class="founder-card">
-          <img src="img/founder1.jpg" alt="عبدالله النصيان" />
-          <h3>عبدالله النصيان</h3>
-          <p>عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً...</p>
-        </div>
-        <div class="founder-card">
-          <img src="img/founder2.jpg" alt="علي النصيان" />
-          <h3>علي النصيان</h3>
-          <p>علي النصيان، حفظه الله، واصل مسيرة التجارة بعزيمة قوية...</p>
-        </div>
-        <div class="founder-card">
-          <img src="img/founder3.jpg" alt="عبدالرحمن النصيان" />
-          <h3>عبدالرحمن النصيان</h3>
-          <p>هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة...</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="copyright">
-      <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("sideMenu").classList.toggle("open");
-    }
-  </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
