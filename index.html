@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>شركة النصيان القابضة</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
   <style>
     .menu-toggle {
       background: none;
@@ -12,21 +12,92 @@
       font-size: 30px;
       color: #fff;
       cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-menu {
+        display: none;
+      }
+    }
+
+    .side-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #0b2f24;
+      padding-top: 60px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li {
+      border-bottom: 1px solid #ffffff22;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .hero {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .hero-overlay h1 {
+      font-size: 40px;
+      color: white;
+      margin: 0;
+      padding-top: 80px;
     }
   </style>
 </head>
 <body>
+
+  <!-- القائمة الجانبية للجوال -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">شركاتنا</a></li>
+      <li><a href="sustainability.html">الاستدامة</a></li>
+      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="careers.html">الوظائف</a></li>
+    </ul>
+  </div>
+
   <header>
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;">
+          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;" />
         </a>
       </div>
       <nav>
-        <a href="sidebar.html">
-          <button class="menu-toggle" aria-label="القائمة">&#9776;</button>
-        </a>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         <ul class="nav-menu">
           <li><a href="about.html">عن الشركة</a></li>
           <li><a href="companies.html">شركاتنا</a></li>
@@ -41,7 +112,7 @@
 
   <main>
     <section class="hero">
-      <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner">
+      <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner" />
       <div class="hero-overlay">
         <h1>شركة النصيان القابضة</h1>
       </div>
@@ -51,7 +122,7 @@
     <section class="intro-quote">
       <div class="container">
         <blockquote>
-          في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل.<br>
+          في مجموعة النصيان القابضة، نؤمن أن الاستثمار الحقيقي لا يُقاس بالأرقام، بل بالعقول التي تصنع المستقبل.<br />
           نحن نبني الأفكار، نُطوّر الإمكانيات، ونحوّل الطموحات إلى واقع يتجاوز حدود المال.
         </blockquote>
       </div>
@@ -92,17 +163,17 @@
     <section class="founders">
       <div class="container">
         <div class="founder-card">
-          <img src="img/founder1.jpg" alt="عبدالله النصيان">
+          <img src="img/founder1.jpg" alt="عبدالله النصيان" />
           <h3>عبدالله النصيان</h3>
           <p>عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً، حين كانت السوق لا تزال تخط أولى خطواتها...</p>
         </div>
         <div class="founder-card">
-          <img src="img/founder2.jpg" alt="علي النصيان">
+          <img src="img/founder2.jpg" alt="علي النصيان" />
           <h3>علي النصيان</h3>
           <p>علي النصيان، حفظه الله، واصل مسيرة التجارة بعزيمة لا تقل عن سابقيه، متنقلاً بين مجالات متعددة...</p>
         </div>
         <div class="founder-card">
-          <img src="img/founder3.jpg" alt="عبدالرحمن النصيان">
+          <img src="img/founder3.jpg" alt="عبدالرحمن النصيان" />
           <h3>عبدالرحمن النصيان</h3>
           <p>عبدالرحمن النصيان هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة، بهوية واضحة وطريق مرسوم...</p>
         </div>
@@ -112,36 +183,16 @@
 
   <footer>
     <div class="container">
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h4>اتصل بنا</h4>
-          <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
-          <p>الهاتف: <a href="tel:+966138145555">+966-13-814-5555</a></p>
-          <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>روابط سريعة</h4>
-          <ul>
-            <li><a href="#">الشروط والأحكام</a></li>
-            <li><a href="#">إخلاء المسؤولية</a></li>
-            <li><a href="#">سياسة الخصوصية</a></li>
-            <li><a href="#">خريطة الموقع</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>تابعنا</h4>
-          <div class="social-icons">
-            <a href="#">فيسبوك</a>
-            <a href="#">تويتر</a>
-            <a href="#">إنستقرام</a>
-          </div>
-          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width: 100px; margin-top: 15px;" />
-        </div>
-      </div>
       <div class="copyright">
         <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
       </div>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
