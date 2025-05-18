@@ -47,6 +47,62 @@
       font-weight: bold;
     }
 
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+
+    .side-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0b2f24;
+      padding-top: 60px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 9999;
+    }
+
+    .side-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li {
+      border-bottom: 1px solid #ffffff22;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
     .hero {
       margin-top: 70px;
       background-image: url('img/banner.jpeg');
@@ -171,16 +227,29 @@
 </head>
 <body>
 
+  <!-- القائمة الجانبية -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">مال</a></li>
+      <li><a href="sustainability.html">أعمال</a></li>
+      <li><a href="media.html">المستثمرين</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+    </ul>
+  </div>
+
   <header>
     <div class="container">
       <div><a href="index.html"><img src="img/logo.jpeg" alt="Logo" style="height: 40px;"></a></div>
       <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
         <ul>
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
           <li><a href="companies.html">مال</a></li>
-          <li><a href="sustainability.html">الاستدامة</a></li>
-          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="sustainability.html">أعمال</a></li>
+          <li><a href="media.html">المستثمرين</a></li>
           <li><a href="contact.html">اتصل بنا</a></li>
         </ul>
       </nav>
@@ -221,46 +290,16 @@
   <section class="section years-section">
     <h2>قيمة المال والاستثمار (2015 - 2024)</h2>
     <div class="year-slider">
-      <div class="year-card">
-        <h3>2015</h3>
-        <p>عام الانطلاقة والتأسيس في قطاع المال داخل المملكة.</p>
-      </div>
-      <div class="year-card">
-        <h3>2016</h3>
-        <p>إطلاق أول صندوق تمويلي خاص بالشركات الناشئة.</p>
-      </div>
-      <div class="year-card">
-        <h3>2017</h3>
-        <p>توسيع الاستثمارات في القطاعات الصحية والتعليمية.</p>
-      </div>
-      <div class="year-card">
-        <h3>2018</h3>
-        <p>إدخال تقنيات التحليل المالي الرقمي الذكي.</p>
-      </div>
-      <div class="year-card">
-        <h3>2019</h3>
-        <p>تأسيس وحدة خاصة بإدارة المخاطر والحوكمة.</p>
-      </div>
-      <div class="year-card">
-        <h3>2020</h3>
-        <p>تحقيق نمو بنسبة 30٪ رغم التحديات العالمية.</p>
-      </div>
-      <div class="year-card">
-        <h3>2021</h3>
-        <p>شراكات استراتيجية مع مؤسسات تمويل دولية.</p>
-      </div>
-      <div class="year-card">
-        <h3>2022</h3>
-        <p>إعادة هيكلة القطاع المالي ورفع كفاءة التشغيل.</p>
-      </div>
-      <div class="year-card">
-        <h3>2023</h3>
-        <p>ابتكار منتجات مالية جديدة للمستثمر المحلي.</p>
-      </div>
-      <div class="year-card">
-        <h3>2024</h3>
-        <p>دخول الأسواق الخليجية وزيادة رأس المال بنسبة 40٪.</p>
-      </div>
+      <div class="year-card"><h3>2015</h3><p>عام الانطلاقة والتأسيس في قطاع المال داخل المملكة.</p></div>
+      <div class="year-card"><h3>2016</h3><p>إطلاق أول صندوق تمويلي خاص بالشركات الناشئة.</p></div>
+      <div class="year-card"><h3>2017</h3><p>توسيع الاستثمارات في القطاعات الصحية والتعليمية.</p></div>
+      <div class="year-card"><h3>2018</h3><p>إدخال تقنيات التحليل المالي الرقمي الذكي.</p></div>
+      <div class="year-card"><h3>2019</h3><p>تأسيس وحدة خاصة بإدارة المخاطر والحوكمة.</p></div>
+      <div class="year-card"><h3>2020</h3><p>تحقيق نمو بنسبة 30٪ رغم التحديات العالمية.</p></div>
+      <div class="year-card"><h3>2021</h3><p>شراكات استراتيجية مع مؤسسات تمويل دولية.</p></div>
+      <div class="year-card"><h3>2022</h3><p>إعادة هيكلة القطاع المالي ورفع كفاءة التشغيل.</p></div>
+      <div class="year-card"><h3>2023</h3><p>ابتكار منتجات مالية جديدة للمستثمر المحلي.</p></div>
+      <div class="year-card"><h3>2024</h3><p>دخول الأسواق الخليجية وزيادة رأس المال بنسبة 40٪.</p></div>
     </div>
   </section>
 
@@ -268,5 +307,11 @@
     <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
+
