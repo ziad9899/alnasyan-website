@@ -3,107 +3,169 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المال | شركة النصيان القابضة</title>
+  <title>مال - شركة النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #ffffff;
+      font-family: 'Arial', sans-serif;
       direction: rtl;
+      background-color: #ffffff;
+      color: #0b2f24;
     }
+
     header {
       background-color: #0b2f24;
-      color: white;
+      color: #ffffff;
       padding: 10px 0;
       position: fixed;
-      top: 0;
       width: 100%;
-      z-index: 999;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    header .container, footer .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .hero {
-      margin-top: 60px;
-      height: 250px;
-      background: url('img/banner.jpeg') no-repeat center center/cover;
+
+    nav ul {
+      list-style: none;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      position: relative;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
     }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      margin-top: 70px;
+      background-image: url('img/banner.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .hero h1 {
-      font-size: 50px;
-      background-color: rgba(11, 47, 36, 0.7);
-      padding: 20px;
+      color: #ffffff;
+      font-size: 36px;
+      background-color: rgba(11, 47, 36, 0.6);
+      padding: 10px 20px;
       border-radius: 10px;
     }
+
     .section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
     }
+
     .section h2 {
       font-size: 32px;
       color: #0b2f24;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
+
     .section p {
-      font-size: 18px;
-      color: #333;
+      max-width: 800px;
+      margin: 0 auto 40px;
       line-height: 1.8;
-      margin-bottom: 40px;
     }
-    .grid {
+
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
+      padding: 0 20px;
     }
+
     .card {
       background-color: #f5f5f5;
-      border-radius: 10px;
       padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .card h3 {
-      font-size: 20px;
       color: #0b2f24;
       margin-bottom: 10px;
+      font-size: 20px;
     }
+
     .card p {
-      font-size: 16px;
-      color: #555;
+      font-size: 15px;
+      color: #444;
     }
-    .timeline-container {
+
+    .years-section {
+      padding: 50px 20px;
+      background-color: #f5f5f5;
+    }
+
+    .years-section h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #d79c5a;
+    }
+
+    .year-slider {
       overflow-x: auto;
       white-space: nowrap;
-      padding: 20px 0;
-      background-color: #0b2f24;
+      padding: 10px 0;
     }
-    .timeline-item {
+
+    .year-slider .year-card {
       display: inline-block;
-      color: #fff;
-      background-color: #d79c5a;
-      padding: 15px 25px;
-      margin: 5px;
-      border-radius: 20px;
-      font-weight: bold;
+      min-width: 250px;
+      background-color: #0b2f24;
+      color: #ffffff;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 0 10px;
+      vertical-align: top;
+      text-align: center;
     }
+
+    .year-card h3 {
+      font-size: 28px;
+      color: #d79c5a;
+      margin-bottom: 10px;
+    }
+
+    .year-card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
     footer {
-      background-color: #333;
-      color: #ccc;
+      background-color: #333333;
+      color: #cccccc;
       text-align: center;
       padding: 20px 10px;
       font-size: 14px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -111,33 +173,35 @@
 
   <header>
     <div class="container">
-      <div><img src="img/logo.jpeg" alt="شعار النصيان" style="height: 40px;"></div>
+      <div><a href="index.html"><img src="img/logo.jpeg" alt="Logo" style="height: 40px;"></a></div>
       <nav>
-        <a href="index.html" style="color: white; margin-left: 15px;">الرئيسية</a>
-        <a href="about.html" style="color: white; margin-left: 15px;">عن الشركة</a>
-        <a href="companies.html" style="color: white; margin-left: 15px;">شركتنا</a>
-        <a href="sustainability.html" style="color: white; margin-left: 15px;">الاستدامة</a>
-        <a href="media.html" style="color: white; margin-left: 15px;">المركز الإعلامي</a>
-        <a href="contact.html" style="color: white;">اتصل بنا</a>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="companies.html">مال</a></li>
+          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <h1>قسم المال</h1>
+    <h1>قطاع المال</h1>
   </section>
 
   <section class="section">
-    <h2>رؤية المال والاستثمار</h2>
-    <p>
-      تهدف شركة النصيان إلى بناء منظومة مالية متكاملة تدعم جميع القطاعات، عبر استثمار ذكي ومستدام يواكب التحولات الرقمية،
-      ويحقق عوائد عالية للمستثمرين والمجتمع. نعمل على تطوير حلول تمويلية مرنة تعزز الابتكار وتحقق القيمة الاقتصادية على المدى البعيد.
-    </p>
+    <h2>استراتيجيتنا في المال</h2>
+    <p>نركز في قطاع المال على بناء بنية مالية قوية تقوم على التنوع والاستثمار المستدام. رؤيتنا هي قيادة السوق بحلول تمويلية مبتكرة تدعم نمو الشركات الصغيرة والكبيرة، وتُسهم في تحقيق أهداف رؤية المملكة 2030 عبر أدوات مالية فعالة ومؤثرة في الاقتصاد الوطني.</p>
+  </section>
 
-    <div class="grid">
+  <section class="section">
+    <h2>مبادئنا الأساسية</h2>
+    <div class="card-grid">
       <div class="card">
         <h3>التمويل الذكي</h3>
-        <p>نستخدم تقنيات حديثة لتحليل الأسواق وتقديم حلول تمويلية فعالة.</p>
+        <p>نستخدم حلول مالية لتحليل الأداء وتقييم جداول إدارة المال.</p>
       </div>
       <div class="card">
         <h3>إدارة المخاطر</h3>
@@ -145,40 +209,63 @@
       </div>
       <div class="card">
         <h3>استثمار مجتمعي</h3>
-        <p>نستثمر في المشاريع التي تعزز النمو الاقتصادي المحلي.</p>
+        <p>نستثمر في القطاعات المؤثرة في النمو الاقتصادي المحلي.</p>
       </div>
       <div class="card">
-        <h3>توسع إقليمي</h3>
-        <p>نتطلع لتوسيع عملياتنا لتشمل أسواق جديدة واعدة في الخليج وخارجه.</p>
+        <h3>توسّع مالي</h3>
+        <p>ندخل في مشاريع ذات عوائد متزايدة في أسواق متنوعة.</p>
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <h2>قيمنا المالية</h2>
-    <p>
-      في النصيان، نضع النزاهة، الشفافية، والابتكار في مقدمة أولوياتنا. نحن نحرص على بناء علاقة ثقة مع جميع شركائنا،
-      من خلال التزام صارم بمعايير الحوكمة المالية، وتبني ثقافة مستدامة تحقق التوازن بين الربحية والمسؤولية.
-    </p>
-  </section>
-
-  <section class="timeline-container">
-    <div class="timeline-item">2015</div>
-    <div class="timeline-item">2016</div>
-    <div class="timeline-item">2017</div>
-    <div class="timeline-item">2018</div>
-    <div class="timeline-item">2019</div>
-    <div class="timeline-item">2020</div>
-    <div class="timeline-item">2021</div>
-    <div class="timeline-item">2022</div>
-    <div class="timeline-item">2023</div>
-    <div class="timeline-item">2024</div>
+  <section class="section years-section">
+    <h2>قيمة المال والاستثمار (2015 - 2024)</h2>
+    <div class="year-slider">
+      <div class="year-card">
+        <h3>2015</h3>
+        <p>عام الانطلاقة والتأسيس في قطاع المال داخل المملكة.</p>
+      </div>
+      <div class="year-card">
+        <h3>2016</h3>
+        <p>إطلاق أول صندوق تمويلي خاص بالشركات الناشئة.</p>
+      </div>
+      <div class="year-card">
+        <h3>2017</h3>
+        <p>توسيع الاستثمارات في القطاعات الصحية والتعليمية.</p>
+      </div>
+      <div class="year-card">
+        <h3>2018</h3>
+        <p>إدخال تقنيات التحليل المالي الرقمي الذكي.</p>
+      </div>
+      <div class="year-card">
+        <h3>2019</h3>
+        <p>تأسيس وحدة خاصة بإدارة المخاطر والحوكمة.</p>
+      </div>
+      <div class="year-card">
+        <h3>2020</h3>
+        <p>تحقيق نمو بنسبة 30٪ رغم التحديات العالمية.</p>
+      </div>
+      <div class="year-card">
+        <h3>2021</h3>
+        <p>شراكات استراتيجية مع مؤسسات تمويل دولية.</p>
+      </div>
+      <div class="year-card">
+        <h3>2022</h3>
+        <p>إعادة هيكلة القطاع المالي ورفع كفاءة التشغيل.</p>
+      </div>
+      <div class="year-card">
+        <h3>2023</h3>
+        <p>ابتكار منتجات مالية جديدة للمستثمر المحلي.</p>
+      </div>
+      <div class="year-card">
+        <h3>2024</h3>
+        <p>دخول الأسواق الخليجية وزيادة رأس المال بنسبة 40٪.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <div class="container">
-      &copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.
-    </div>
+    <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
   </footer>
 
 </body>
