@@ -54,15 +54,16 @@ header .container {
 }
 
 .menu-toggle {
-  display: block;
   background: none;
   border: none;
   color: #ffffff;
   font-size: 26px;
   cursor: pointer;
   margin-left: 15px;
+  display: none;
 }
 
+/* Navigation */
 .nav-menu {
   list-style: none;
   padding: 0;
@@ -84,26 +85,15 @@ header .container {
   color: #d79c5a;
 }
 
-.header-actions {
-  display: none;
-}
-
+/* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  padding-top: 70px;
-  background-color: #0b2f24;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-banner {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -116,28 +106,22 @@ header .container {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 47, 36, 0.7);
+  background-color: rgba(11, 47, 36, 0.6);
   z-index: -1;
 }
 
 .hero h1 {
   font-size: 3em;
   color: #d79c5a;
+  padding-top: 80px;
+  text-align: center;
 }
 
 .scroll-down-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #ffffff;
-  border: 2px solid #ffffff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  background-color: transparent;
+  display: none;
 }
 
+/* Intro Quote */
 .intro-quote blockquote {
   font-size: 1.2em;
   color: #0b2f24;
@@ -151,6 +135,7 @@ header .container {
   line-height: 2;
 }
 
+/* Overview Section */
 .overview-section {
   padding: 60px 20px;
   background: #fff;
@@ -183,6 +168,7 @@ header .container {
   color: #333;
 }
 
+/* Departments */
 .departments {
   text-align: center;
   margin: 50px auto;
@@ -213,6 +199,7 @@ header .container {
   text-align: center;
 }
 
+/* Founders */
 .founders {
   display: flex;
   flex-wrap: wrap;
@@ -251,95 +238,25 @@ header .container {
   margin-bottom: 10px;
 }
 
-.founder-card .learn-more {
-  color: #0b2f24;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
+/* Footer */
 footer {
-  background-color: #333333;
-  color: #cccccc;
-  padding: 40px 0 20px;
+  background-color: #333;
+  color: #ccc;
 }
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.footer-col h4 {
-  color: #ffffff;
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #d79c5a;
-  padding-bottom: 8px;
-  display: inline-block;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 10px;
-  font-size: 0.95em;
-}
-
-.footer-col a {
-  color: #cccccc;
-}
-
-.footer-col a:hover {
-  color: #d79c5a;
-}
-
-.social-icons a {
-  margin-right: 10px;
-  color: #ffffff;
-  font-size: 1.5em;
-}
-
-.vision-logo {
-  width: 100px;
-  margin-top: 15px;
-}
-
-.copyright {
+footer .copyright {
   text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid #555555;
-  font-size: 0.9em;
+  padding: 20px 10px 10px;
+  font-size: 14px;
 }
 
-/* التعديل الجديد لإزالة القائمة الجانبية */
-.menu-toggle {
-  cursor: pointer;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none !important;
-  }
-}
-/* القائمة الجانبية للجوال */
+/* Side Menu (Mobile) */
 .side-menu {
   display: none;
   position: fixed;
   top: 0;
   right: 0;
-  width: 250px;
+  width: 100%;
   height: 100%;
   background-color: #0b2f24;
   padding-top: 60px;
@@ -365,7 +282,7 @@ footer {
 
 .side-menu a {
   display: block;
-  padding: 15px;
+  padding: 15px 20px;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -375,18 +292,23 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* إظهار زر القائمة في الجوال فقط */
-.menu-toggle {
-  display: none;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
   .nav-menu {
-    display: none;
+    display: none !important;
+  }
+
+  .founders {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .overview-grid {
+    flex-direction: column;
+    gap: 15px;
   }
 }
-
