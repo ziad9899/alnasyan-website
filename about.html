@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عن الشركة - شركة النصيان القابضة</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .hero-banner-about {
+      background-color: #0b2f24;
+      color: #fff;
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+
+    .hero-banner-about h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .hero-banner-about h2 {
+      font-size: 28px;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    .about-text {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 18px;
+      line-height: 2;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .features-section {
+      background-color: #0b2f24;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .features-column {
+      flex: 1;
+      min-width: 250px;
+      margin: 20px;
+    }
+
+    .features-column h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+
+    .features-center {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    @media (max-width: 768px) {
+      .features-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .features-center {
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- القائمة الجانبية للجوال -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">شركاتنا</a></li>
+      <li><a href="sustainability.html">الاستدامة</a></li>
+      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="careers.html">الوظائف</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 40px;" />
+        </a>
+      </div>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="companies.html">شركاتنا</a></li>
+          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="careers.html">الوظائف</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- بنر علوي -->
+  <section class="hero-banner-about">
+    <h1>من نحن</h1>
+    <h2>لمحة عامة عن شركة النصيان القابضة</h2>
+  </section>
+
+  <!-- تعريف الشركة -->
+  <section class="about-text">
+    <p>
+      تأسست شركة النصيان القابضة في عام 2015 كمجموعة سعودية وطنية، تهدف إلى الريادة في مجالات متعددة تشمل التجارة، التطوير، والخدمات. نعمل على بناء بيئة أعمال متطورة تتوافق مع رؤية المملكة 2030، من خلال الاعتماد على الابتكار والشفافية، وتقديم قيمة حقيقية للمجتمع والسوق المحلي.
+      <br><br>
+      نحن في النصيان القابضة نؤمن أن النجاح لا يقاس فقط بالأرباح، بل بالقدرة على إحداث فرق وتحقيق أثر مستدام يُلهم الأجيال القادمة.
+    </p>
+  </section>
+
+  <!-- مميزات الشركة -->
+  <section class="features-section">
+    <div class="features-container">
+      <div class="features-column">
+        <h3>الاهتمام بالمبيعات</h3>
+        <h3>العمل الجاد والتنوع</h3>
+        <h3>النمو بطريقة ذكية</h3>
+        <h3>رضا العملاء</h3>
+      </div>
+
+      <div class="features-center">2015</div>
+
+      <div class="features-column">
+        <h3>أفكار مبتكرة</h3>
+        <h3>الاعتماد على الكفاءات الوطنية</h3>
+        <h3>التقنيات الحديثة</h3>
+        <h3>بناء علاقات/وطيدة</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- نص ختامي -->
+  <div class="footer-note">
+    شركة النصيان القابضة تسعى لتحقيق التميز والنمو المستدام، وتلتزم برؤية المملكة 2030 من خلال تطوير الكفاءات الوطنية والاستثمار في حلول تقنية حديثة.
+  </div>
+
+  <!-- فوتر -->
+  <footer>
+    <div class="copyright">
+      <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
+
+</body>
+</html>
 
