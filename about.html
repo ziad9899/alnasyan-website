@@ -91,6 +91,47 @@
       padding: 20px;
     }
 
+    /* الشريط العلوي */
+    header {
+      background-color: #0b2f24;
+      color: #ffffff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d79c5a;
+    }
+
     @media (max-width: 768px) {
       .features-container {
         flex-direction: column;
@@ -108,28 +149,51 @@
         font-size: 20px;
       }
 
-      .features-column {
-        margin: 10px 0;
+      nav ul {
+        flex-direction: column;
+        background-color: #0b2f24;
+        width: 100%;
+        padding: 10px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- رأس الصفحة -->
+  <!-- شريط علوي -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpeg" alt="شعار الشركة" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="companies.html">شركاتنا</a></li>
+          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="careers.html">الوظائف</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- بنر -->
   <div class="hero-section">
     <h1>من نحن</h1>
     <h2>لمحة عامة عن شركة النصيان القابضة</h2>
   </div>
 
-  <!-- وصف نصي طويل -->
+  <!-- نص تعريفي -->
   <div class="about-description">
-    تأسست شركة النصيان القابضة عام 2015 كمجموعة وطنية متخصصة في قطاعات متعددة تشمل التطوير، التجارة والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة قائمة على الابتكار، والاستثمار الذكي في الكفاءات السعودية.  
+    تأسست شركة النصيان القابضة عام 2015 كمجموعة وطنية متخصصة في قطاعات متعددة تشمل التطوير، التجارة والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة قائمة على الابتكار، والاستثمار الذكي في الكفاءات السعودية.
     <br><br>
     تسعى النصيان القابضة إلى التوسع الذكي والمساهمة الفعالة في تحقيق تطلعات رؤية المملكة 2030، من خلال مشاريع نوعية وشراكات طويلة الأمد تدفع عجلة الاقتصاد الوطني. نحن نؤمن أن النجاح يبدأ من الداخل، ونضع الإنسان في صميم نهجنا المؤسسي.
   </div>
 
-  <!-- مميزات الشركة -->
+  <!-- المميزات -->
   <div class="features-section">
     <div class="features-container">
       <div class="features-column">
@@ -138,9 +202,7 @@
         <h3>النمو بطريقة ذكية</h3>
         <h3>رضا العملاء</h3>
       </div>
-
       <div class="features-center">2015</div>
-
       <div class="features-column">
         <h3>أفكار مبتكرة</h3>
         <h3>الاعتماد على الكفاءات الوطنية</h3>
@@ -150,12 +212,12 @@
     </div>
   </div>
 
-  <!-- رؤية مستقبلية -->
+  <!-- فقرة أخيرة -->
   <div class="footer-note">
     نسير بخطى ثابتة نحو مستقبل مزدهر بالتوازي مع رؤية المملكة 2030. نؤمن بأن استدامة الأعمال لا تتحقق فقط بالنتائج المالية، بل ببناء منظومة عمل متكاملة تعتمد على الابتكار، وتزرع قيم الثقة والمسؤولية المجتمعية في جميع جوانبها.
   </div>
 
-  <!-- الفوتر -->
+  <!-- فوتر -->
   <footer>
     <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
   </footer>
