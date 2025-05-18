@@ -11,90 +11,12 @@
       padding: 0;
       font-family: Arial, sans-serif;
       direction: rtl;
+      background-color: #ffffff;
     }
 
-    .hero-section {
-      background-color: #0b2f24;
-      color: white;
-      padding: 60px 20px 40px;
-      text-align: center;
-    }
-
-    .hero-section h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero-section h2 {
-      font-size: 24px;
-      font-weight: normal;
-    }
-
-    .about-description {
-      max-width: 900px;
-      margin: 40px auto;
-      font-size: 18px;
-      line-height: 2;
-      text-align: center;
-      color: #333;
-      padding: 0 20px;
-    }
-
-    .features-section {
-      background-color: #0b2f24;
-      color: white;
-      padding: 60px 20px;
-    }
-
-    .features-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      text-align: center;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .features-column {
-      flex: 1;
-      min-width: 250px;
-      margin: 20px;
-    }
-
-    .features-column h3 {
-      margin-bottom: 20px;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .features-center {
-      font-size: 60px;
-      font-weight: bold;
-      margin: 40px 0;
-      color: #d79c5a;
-    }
-
-    .footer-note {
-      background-color: #f5f5f5;
-      text-align: center;
-      font-size: 17px;
-      color: #444;
-      padding: 40px 20px;
-      line-height: 2;
-    }
-
-    footer {
-      background-color: #333;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-    }
-
-    /* الشريط العلوي */
     header {
       background-color: #0b2f24;
-      color: #ffffff;
+      color: #fff;
       padding: 15px 0;
       position: sticky;
       top: 0;
@@ -118,8 +40,8 @@
       list-style: none;
       display: flex;
       gap: 20px;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
 
     nav a {
@@ -132,35 +54,112 @@
       color: #d79c5a;
     }
 
+    /* بنر */
+    .hero {
+      background-color: #0b2f24;
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    /* نص تعريفي */
+    .about-text {
+      max-width: 900px;
+      margin: 40px auto;
+      font-size: 18px;
+      line-height: 2;
+      padding: 0 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    /* المميزات */
+    .features {
+      background-color: #0b2f24;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .features-col {
+      flex: 1;
+      min-width: 200px;
+      margin: 20px;
+    }
+
+    .features-col h3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .features-center {
+      font-size: 55px;
+      font-weight: bold;
+      margin: 40px 0;
+      color: #d79c5a;
+    }
+
+    /* ختام */
+    .vision-text {
+      background-color: #f5f5f5;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 17px;
+      color: #444;
+      line-height: 2;
+    }
+
+    footer {
+      background-color: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
     @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #0b2f24;
+      }
+
       .features-container {
         flex-direction: column;
       }
 
       .features-center {
-        font-size: 45px;
+        font-size: 40px;
       }
 
-      .hero-section h1 {
+      .hero h1 {
         font-size: 32px;
-      }
-
-      .hero-section h2 {
-        font-size: 20px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        background-color: #0b2f24;
-        width: 100%;
-        padding: 10px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- شريط علوي -->
+  <!-- الشريط العلوي -->
   <header>
     <div class="container">
       <div class="logo">
@@ -181,45 +180,45 @@
   </header>
 
   <!-- بنر -->
-  <div class="hero-section">
+  <section class="hero">
     <h1>من نحن</h1>
     <h2>لمحة عامة عن شركة النصيان القابضة</h2>
-  </div>
+  </section>
 
   <!-- نص تعريفي -->
-  <div class="about-description">
-    تأسست شركة النصيان القابضة عام 2015 كمجموعة وطنية متخصصة في قطاعات متعددة تشمل التطوير، التجارة والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة قائمة على الابتكار، والاستثمار الذكي في الكفاءات السعودية.
+  <div class="about-text">
+    تأسست شركة النصيان القابضة عام 2015 كمجموعة سعودية متخصصة في قطاعات متنوعة تشمل التطوير والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة، قائمة على الابتكار، وتعمل على تمكين الكفاءات الوطنية.
     <br><br>
-    تسعى النصيان القابضة إلى التوسع الذكي والمساهمة الفعالة في تحقيق تطلعات رؤية المملكة 2030، من خلال مشاريع نوعية وشراكات طويلة الأمد تدفع عجلة الاقتصاد الوطني. نحن نؤمن أن النجاح يبدأ من الداخل، ونضع الإنسان في صميم نهجنا المؤسسي.
+    تهدف الشركة إلى تعزيز مكانتها ضمن رواد السوق المحلي والإقليمي، وتُسهم في دعم رؤية المملكة 2030 من خلال التوسع المدروس، والشراكات الاستراتيجية، وتطوير حلول أعمال فاعلة. نحن نؤمن أن النجاح لا يتحقق إلا بالقيم، والالتزام، والمسؤولية.
   </div>
 
   <!-- المميزات -->
-  <div class="features-section">
+  <section class="features">
     <div class="features-container">
-      <div class="features-column">
+      <div class="features-col">
         <h3>الاهتمام بالمبيعات</h3>
         <h3>العمل الجاد والتنوع</h3>
         <h3>النمو بطريقة ذكية</h3>
         <h3>رضا العملاء</h3>
       </div>
       <div class="features-center">2015</div>
-      <div class="features-column">
+      <div class="features-col">
         <h3>أفكار مبتكرة</h3>
         <h3>الاعتماد على الكفاءات الوطنية</h3>
         <h3>التقنيات الحديثة</h3>
         <h3>بناء علاقات متينة / وطيدة</h3>
       </div>
     </div>
+  </section>
+
+  <!-- فقرة رؤية -->
+  <div class="vision-text">
+    من خلال التزامنا بتحقيق رؤية المملكة 2030 وأهداف التنمية المستدامة، نواصل رحلتنا نحو التميّز عبر تمكين الكفاءات السعودية، وتبنّي أحدث التقنيات، وتوسيع نطاق أعمالنا بما يحقق القيمة للمجتمع ويواكب تطلعات الأجيال القادمة.
   </div>
 
-  <!-- فقرة أخيرة -->
-  <div class="footer-note">
-    نسير بخطى ثابتة نحو مستقبل مزدهر بالتوازي مع رؤية المملكة 2030. نؤمن بأن استدامة الأعمال لا تتحقق فقط بالنتائج المالية، بل ببناء منظومة عمل متكاملة تعتمد على الابتكار، وتزرع قيم الثقة والمسؤولية المجتمعية في جميع جوانبها.
-  </div>
-
-  <!-- فوتر -->
+  <!-- الفوتر -->
   <footer>
-    <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+    &copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.
   </footer>
 
 </body>
