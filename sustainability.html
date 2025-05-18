@@ -2,90 +2,256 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>الاستدامة - شركة النصيان القابضة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أعمال - شركة النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      background-color: #ffffff;
+      color: #0b2f24;
+    }
+
+    header {
+      background-color: #0b2f24;
+      color: #ffffff;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      margin-top: 70px;
+      background-image: url('img/banner.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: #ffffff;
+      font-size: 36px;
+      background-color: rgba(11, 47, 36, 0.6);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #0b2f24;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      line-height: 1.9;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #f5f5f5;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #0b2f24;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #444;
+    }
+
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      padding: 0 10px;
+    }
+
+    .icon-box {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .icon-box img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .icon-box h4 {
+      font-size: 18px;
+      color: #0b2f24;
+      margin-bottom: 10px;
+    }
+
+    .icon-box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333333;
+      color: #cccccc;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <div class="container">
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" /></a>
-      </div>
+      <div><a href="index.html"><img src="img/logo.jpeg" alt="Logo" style="height: 40px;"></a></div>
       <nav>
-        <button class="menu-toggle" aria-label="القائمة">☰</button>
-        <ul class="nav-menu">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
-          <li><a href="companies.html">شركاتنا</a></li>
-          <li><a href="sustainability.html">الاستدامة</a></li>
+          <li><a href="companies.html">مال</a></li>
+          <li><a href="sustainability.html">أعمال</a></li>
           <li><a href="media.html">المركز الإعلامي</a></li>
           <li><a href="contact.html">اتصل بنا</a></li>
-          <li><a href="careers.html">الوظائف</a></li>
         </ul>
       </nav>
-      <div class="header-actions">
-        <a href="#" class="lang-switch">EN</a>
-        <button class="search-icon" aria-label="بحث">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-            <path d="M15.5 14h-.79l-.28-.27A6.471..."/>
-          </svg>
-        </button>
-      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-title-section" style="padding-top: 100px; background-color: #f0f0f0; text-align: center; padding-bottom: 40px;">
-      <div class="container">
-        <h1>الاستدامة</h1>
-      </div>
-    </section>
+  <section class="hero">
+    <h1>قطاع الأعمال</h1>
+  </section>
 
-    <section class="page-content" style="padding: 40px 0;">
-      <div class="container">
-        <p>محتوى صفحة "الاستدامة" سيتم إضافته هنا لاحقًا. هذه الصفحة هي جزء من هيكل الموقع المطلوب.</p>
-        <p>سيتمكن المستخدم من تعديل هذا المحتوى من خلال لوحة التحكم.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
-    </section>
-  </main>
+  <section class="section">
+    <h2>رؤيتنا في قطاع الأعمال</h2>
+    <p>
+      نُدرك أن الأعمال ليست مجرد أنشطة اقتصادية، بل هي رؤية شاملة تهدف إلى خلق بيئة مزدهرة ومستدامة. شركة النصيان القابضة تعمل على تنويع أنشطتها التجارية لتشمل مجموعة واسعة من القطاعات الصناعية والخدمية، بما في ذلك العقار، اللوجستيات، الطاقة، التقنية، والتصنيع. نهدف إلى بناء مستقبل أكثر استدامة من خلال شراكات استراتيجية، وتمكين القدرات المحلية، وتعزيز الابتكار في عملياتنا التشغيلية.
+    </p>
+  </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-columns">
-        <div class="footer-col">
-          <h4>اتصل بنا</h4>
-          <p>شركة النصيان القابضة<br>طريق الملك سعود<br>ص.ب: 402، الخبر 31952<br>المملكة العربية السعودية</p>
-          <p>الهاتف: <a href="tel:+966138145555">+966-13-814-5555</a></p>
-          <p>البريد الإلكتروني: <a href="mailto:info@alnasyan.com">info@alnasyan.com</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>روابط سريعة</h4>
-          <ul>
-            <li><a href="#">الشروط والأحكام</a></li>
-            <li><a href="#">إخلاء المسؤولية</a></li>
-            <li><a href="#">سياسة الخصوصية</a></li>
-            <li><a href="#">خريطة الموقع</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>تابعنا</h4>
-          <div class="social-icons">
-            <a href="#"><svg>...</svg></a>
-            <a href="#"><svg>...</svg></a>
-            <a href="#"><svg>...</svg></a>
-            <a href="#"><svg>...</svg></a>
-          </div>
-          <img src="img/vision_2030.png" alt="رؤية السعودية 2030" style="width:100px; margin-top:15px;" />
-        </div>
+  <section class="section">
+    <h2>أبرز مجالات أعمالنا</h2>
+    <div class="grid-4">
+      <div class="card">
+        <h3>الاستثمار الصناعي</h3>
+        <p>نستثمر في المصانع الوطنية والمنتجات التي تدعم الاكتفاء الذاتي.</p>
       </div>
-      <div class="copyright">
-        <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+      <div class="card">
+        <h3>الخدمات اللوجستية</h3>
+        <p>نُدير منظومات نقل وتوزيع فعالة تدعم التجارة والإمداد.</p>
+      </div>
+      <div class="card">
+        <h3>الطاقة والتقنية</h3>
+        <p>نُدخل التقنيات الحديثة لتطوير حلول ذكية في قطاع الطاقة.</p>
+      </div>
+      <div class="card">
+        <h3>القطاع العقاري</h3>
+        <p>نُطور مشاريع سكنية وتجارية تدعم النمو الحضري والاقتصادي.</p>
       </div>
     </div>
+  </section>
+
+  <section class="section">
+    <h2>قيمنا التشغيلية</h2>
+    <p>
+      تعتمد عملياتنا على الجودة والابتكار والتكامل بين فرق العمل، ونؤمن بأهمية المرونة في مواجهة تحديات السوق. من خلال تكنولوجيا متقدمة وإدارة احترافية، نحقق استدامة في الأداء ونمو في العوائد، مما يعزز مكانتنا في السوق السعودي ويقودنا نحو الريادة.
+    </p>
+    <div class="icons-grid">
+      <div class="icon-box">
+        <img src="img/icon1.png" alt="Icon" />
+        <h4>الابتكار</h4>
+        <p>نطوّر الحلول لنواجه تحديات السوق المتغيرة.</p>
+      </div>
+      <div class="icon-box">
+        <img src="img/icon2.png" alt="Icon" />
+        <h4>المرونة</h4>
+        <p>نواكب التغييرات ونُكيف أعمالنا بسرعة وفعالية.</p>
+      </div>
+      <div class="icon-box">
+        <img src="img/icon3.png" alt="Icon" />
+        <h4>الاستدامة</h4>
+        <p>نلتزم بتقليل الأثر البيئي وتعزيز القيمة المجتمعية.</p>
+      </div>
+      <div class="icon-box">
+        <img src="img/icon4.png" alt="Icon" />
+        <h4>الكفاءة</h4>
+        <p>نُدير الموارد بأعلى فعالية لتحقيق نتائج أفضل.</p>
+      </div>
+      <div class="icon-box">
+        <img src="img/icon5.png" alt="Icon" />
+        <h4>الشفافية</h4>
+        <p>نؤمن بالوضوح والمصداقية في جميع تعاملاتنا.</p>
+      </div>
+      <div class="icon-box">
+        <img src="img/icon6.png" alt="Icon" />
+        <h4>الشراكة</h4>
+        <p>نبني علاقات طويلة المدى مع عملائنا وشركائنا.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
