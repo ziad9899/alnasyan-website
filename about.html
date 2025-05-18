@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عن الشركة - النصيان القابضة</title>
+  <title>عن الشركة - شركة النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     header {
@@ -92,65 +92,33 @@
       background-color: rgba(11, 47, 36, 0.6);
     }
 
-    .about-section {
-      padding: 60px 20px;
-      background-color: #ffffff;
-      text-align: center;
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
     }
 
-    .about-section h1 {
-      color: #0b2f24;
-      font-size: 48px;
+    .about-section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    .about-section h2 {
+      font-size: 30px;
       margin-bottom: 20px;
+      color: #0b2f24;
     }
 
     .about-section p {
-      max-width: 900px;
-      margin: 0 auto 30px;
       font-size: 18px;
-      line-height: 2;
       color: #333;
-    }
-
-    .core-values {
-      background-color: #0b2f24;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .core-values h2 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-    }
-
-    .values-grid div {
-      background-color: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .values-grid .center-year {
-      font-size: 50px;
-      background-color: transparent;
-      font-weight: bold;
-      padding: 20px 0;
-    }
-
-    .core-values p {
-      font-size: 16px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 2;
     }
 
     footer .copyright {
@@ -163,15 +131,16 @@
   </style>
 </head>
 <body>
+
+  <!-- القائمة الجانبية للجوال -->
   <div class="side-menu" id="sideMenu">
     <ul>
       <li><a href="index.html">الرئيسية</a></li>
       <li><a href="about.html">عن الشركة</a></li>
-      <li><a href="companies.html">شركاتنا</a></li>
-      <li><a href="sustainability.html">الاستدامة</a></li>
-      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="companies.html">مال</a></li>
+      <li><a href="sustainability.html">أعمال</a></li>
+      <li><a href="media.html">المستثمرين</a></li>
       <li><a href="contact.html">اتصل بنا</a></li>
-      <li><a href="careers.html">الوظائف</a></li>
     </ul>
   </div>
 
@@ -187,47 +156,29 @@
         <ul class="nav-menu">
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
-          <li><a href="companies.html">شركاتنا</a></li>
-          <li><a href="sustainability.html">الاستدامة</a></li>
-          <li><a href="media.html">المركز الإعلامي</a></li>
+          <li><a href="companies.html">مال</a></li>
+          <li><a href="sustainability.html">أعمال</a></li>
+          <li><a href="media.html">المستثمرين</a></li>
           <li><a href="contact.html">اتصل بنا</a></li>
-          <li><a href="careers.html">الوظائف</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="img/banner.jpeg" alt="بانر الشركة" class="hero-banner">
-      <div class="hero-overlay"></div>
-    </section>
+  <section class="hero">
+    <img src="img/banner.jpeg" alt="بنر" class="hero-banner" />
+    <div class="hero-overlay"></div>
+    <div class="hero-text">عن الشركة</div>
+  </section>
 
-    <section class="about-section">
-      <h1>من نحن</h1>
-      <p>
-        تأسست شركة النصيان القابضة في عام 2015 كمجموعة سعودية وطنية متخصصة في قطاعات متعددة تشمل التطوير، التجارة والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة قائمة على الإبداع، التقنية، والاستثمار في الكفاءات الوطنية. نطمح إلى الريادة في تحقيق الأهداف الوطنية لرؤية المملكة 2030، مع الاستمرار في الابتكار والتوسع لخدمة عملائنا وشركائنا بفعالية.
-      </p>
-    </section>
-
-    <section class="core-values">
-      <h2>قيمنا الأساسية</h2>
-      <div class="values-grid">
-        <div>أفكار مبتكرة</div>
-        <div>الاعتماد على الكفاءات الوطنية</div>
-        <div class="center-year">2015</div>
-        <div>التقنيات الحديثة</div>
-        <div>بناء علاقات متينة/وطيدة</div>
-        <div>الاهتمام بالمبيعات</div>
-        <div>العمل الجاد والتنوع</div>
-        <div>النمو بطريقة ذكية</div>
-        <div>رضا العملاء</div>
-      </div>
-      <p>
-        من خلال التزامنا برؤية 2030، نسعى لتحقيق إنجازات مستدامة تسهم في بناء اقتصاد مزدهر، ومجتمع حيوي، ووطن طموح. نحرص على دعم البيئة والاستثمار في التقنيات والمبادرات التي تحقق القيمة وتواكب المستقبل.
-      </p>
-    </section>
-  </main>
+  <section class="about-section">
+    <h2>من نحن</h2>
+    <p>
+      شركة النصيان القابضة هي كيان استثماري رائد تأسس عام 2015، ويضم تحت مظلته مجموعة متنوعة من الأنشطة والمجالات. نؤمن أن النجاح الحقيقي ينبع من تكامل الرؤية الواضحة مع التنفيذ الاحترافي، ومن هذا المنطلق نسعى دائمًا نحو التميز، والاستدامة، والمساهمة الفعّالة في تحقيق رؤية المملكة 2030.
+      <br><br>
+      نُركز في استثماراتنا على القطاعات الحيوية مثل المال، الأعمال، العقار، الصناعة، والتقنية، مستندين إلى إرث عريق من الخبرة التجارية التي تمتد لعقود. نُؤمن بأهمية تمكين الكفاءات الوطنية، ونعمل على بناء شراكات استراتيجية محلية وعالمية تُحقق قيمة حقيقية.
+    </p>
+  </section>
 
   <footer>
     <div class="copyright">
@@ -242,3 +193,4 @@
   </script>
 </body>
 </html>
+
