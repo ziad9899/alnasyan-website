@@ -35,7 +35,7 @@ img {
 header {
   background-color: #0b2f24;
   color: #ffffff;
-  padding: 15px 0;
+  padding: 8px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -50,7 +50,7 @@ header .container {
 }
 
 .logo img {
-  height: 50px;
+  height: 40px;
 }
 
 .menu-toggle {
@@ -63,7 +63,6 @@ header .container {
   display: none;
 }
 
-/* Navigation */
 .nav-menu {
   list-style: none;
   padding: 0;
@@ -89,6 +88,7 @@ header .container {
 .hero {
   position: relative;
   height: 300px;
+  background-image: url('../img/banner.jpeg');
   background-size: cover;
   background-position: center;
 }
@@ -108,13 +108,6 @@ header .container {
   height: 100%;
   background-color: rgba(11, 47, 36, 0.6);
   z-index: -1;
-}
-
-.hero h1 {
-  font-size: 3em;
-  color: #d79c5a;
-  padding-top: 80px;
-  text-align: center;
 }
 
 .scroll-down-btn {
@@ -168,35 +161,43 @@ header .container {
   color: #333;
 }
 
-/* Departments */
-.departments {
-  text-align: center;
-  margin: 50px auto;
-}
-
-.departments ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  display: inline-block;
-}
-
-.departments li {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.departments li ul {
-  margin-top: 5px;
-  padding-right: 0;
-}
-
-.departments li ul li {
-  font-size: 1em;
-  font-weight: normal;
+/* الأقسام الجديدة */
+.section-title {
+  font-size: 60px;
   color: #0b2f24;
   text-align: center;
+  margin: 60px 0 30px;
+}
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.department-card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+}
+
+.department-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.department-card h3 {
+  font-size: 20px;
+  color: #0b2f24;
 }
 
 /* Founders */
@@ -239,15 +240,12 @@ header .container {
 }
 
 /* Footer */
-footer {
-  background-color: #333;
-  color: #ccc;
-}
-
 footer .copyright {
   text-align: center;
   padding: 20px 10px 10px;
   font-size: 14px;
+  background-color: #333;
+  color: #ccc;
 }
 
 /* Side Menu (Mobile) */
