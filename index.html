@@ -29,7 +29,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 250px;
+      width: 100%;
       height: 100%;
       background-color: #0b2f24;
       padding-top: 60px;
@@ -55,7 +55,7 @@
 
     .side-menu a {
       display: block;
-      padding: 15px;
+      padding: 15px 20px;
       color: #fff;
       text-decoration: none;
       font-size: 18px;
@@ -64,14 +64,31 @@
     .hero {
       position: relative;
       height: 300px;
-      overflow: hidden;
+      background-image: url('img/banner-business.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
-    .hero-overlay h1 {
-      font-size: 40px;
-      color: white;
-      margin: 0;
-      padding-top: 80px;
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(11, 47, 36, 0.6);
+    }
+
+    /* إزالة زر النزول للأسفل */
+    .scroll-down-btn {
+      display: none;
+    }
+
+    footer .copyright {
+      padding: 20px 0 10px;
+      font-size: 14px;
+      text-align: center;
+      background-color: #333;
+      color: #ccc;
     }
   </style>
 </head>
@@ -112,11 +129,7 @@
 
   <main>
     <section class="hero">
-      <img src="img/banner.jpeg" alt="بانر رئيسي" class="hero-banner" />
-      <div class="hero-overlay">
-        <h1>شركة النصيان القابضة</h1>
-      </div>
-      <a href="#overview" class="scroll-down-btn">النزول للأسفل</a>
+      <div class="hero-overlay"></div>
     </section>
 
     <section class="intro-quote">
@@ -182,10 +195,8 @@
   </main>
 
   <footer>
-    <div class="container">
-      <div class="copyright">
-        <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
-      </div>
+    <div class="copyright">
+      <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
 
