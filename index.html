@@ -6,6 +6,17 @@
   <title>شركة النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    header {
+      background-color: #0b2f24;
+      color: #ffffff;
+      padding: 8px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
     .menu-toggle {
       background: none;
       border: none;
@@ -78,15 +89,52 @@
       background-color: rgba(11, 47, 36, 0.6);
     }
 
-    /* إزالة زر النزول للأسفل */
     .scroll-down-btn {
       display: none;
     }
 
-    footer .copyright {
-      padding: 20px 0 10px;
-      font-size: 14px;
+    .section-title {
+      font-size: 60px;
+      color: #0b2f24;
       text-align: center;
+      margin: 60px 0 30px;
+    }
+
+    .department-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .department-card {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .department-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .department-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .department-card h3 {
+      font-size: 20px;
+      color: #0b2f24;
+    }
+
+    footer .copyright {
+      text-align: center;
+      padding: 20px 10px 10px;
+      font-size: 14px;
       background-color: #333;
       color: #ccc;
     }
@@ -110,7 +158,7 @@
     <div class="container">
       <div class="logo">
         <a href="index.html">
-          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 50px;" />
+          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 40px;" />
         </a>
       </div>
       <nav>
@@ -155,21 +203,25 @@
 
     <section class="departments">
       <div class="container">
-        <h2>الأقسام</h2>
-        <ul>
-          <li>المال
-            <ul>
-              <li><a href="#">مال 1</a></li>
-              <li><a href="#">مال 2</a></li>
-            </ul>
-          </li>
-          <li>أعمال
-            <ul>
-              <li><a href="#">أعمال 1</a></li>
-              <li><a href="#">أعمال 2</a></li>
-            </ul>
-          </li>
-        </ul>
+        <h2 class="section-title">الأقسام</h2>
+        <div class="department-grid">
+          <div class="department-card">
+            <img src="img/icon1.png" alt="أيقونة" />
+            <h3>مال 1</h3>
+          </div>
+          <div class="department-card">
+            <img src="img/icon2.png" alt="أيقونة" />
+            <h3>مال 2</h3>
+          </div>
+          <div class="department-card">
+            <img src="img/icon3.png" alt="أيقونة" />
+            <h3>أعمال 1</h3>
+          </div>
+          <div class="department-card">
+            <img src="img/icon4.png" alt="أيقونة" />
+            <h3>أعمال 2</h3>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -178,17 +230,17 @@
         <div class="founder-card">
           <img src="img/founder1.jpg" alt="عبدالله النصيان" />
           <h3>عبدالله النصيان</h3>
-          <p>عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً، حين كانت السوق لا تزال تخط أولى خطواتها...</p>
+          <p>عبدالله النصيان، رحمه الله، بدأ رحلته في التجارة قبل أكثر من ستين عاماً...</p>
         </div>
         <div class="founder-card">
           <img src="img/founder2.jpg" alt="علي النصيان" />
           <h3>علي النصيان</h3>
-          <p>علي النصيان، حفظه الله، واصل مسيرة التجارة بعزيمة لا تقل عن سابقيه، متنقلاً بين مجالات متعددة...</p>
+          <p>علي النصيان، حفظه الله، واصل مسيرة التجارة بعزيمة قوية...</p>
         </div>
         <div class="founder-card">
           <img src="img/founder3.jpg" alt="عبدالرحمن النصيان" />
           <h3>عبدالرحمن النصيان</h3>
-          <p>عبدالرحمن النصيان هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة، بهوية واضحة وطريق مرسوم...</p>
+          <p>هو من نقل هذا الكيان من عمل تقليدي إلى شركة رسمية متكاملة...</p>
         </div>
       </div>
     </section>
