@@ -3,170 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عن الشركة - شركة النصيان القابضة</title>
+  <title>عن الشركة - النصيان القابضة</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background-color: #ffffff;
-    }
-
     header {
       background-color: #0b2f24;
-      color: #fff;
-      padding: 15px 0;
-      position: sticky;
+      color: #ffffff;
+      padding: 8px 0;
+      position: fixed;
+      width: 100%;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #d79c5a;
-    }
-
-    /* بنر */
-    .hero {
-      background-color: #0b2f24;
-      color: white;
-      text-align: center;
-      padding: 60px 20px 40px;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 20px;
-      font-weight: normal;
-    }
-
-    /* نص تعريفي */
-    .about-text {
-      max-width: 900px;
-      margin: 40px auto;
-      font-size: 18px;
-      line-height: 2;
-      padding: 0 20px;
-      color: #333;
-      text-align: center;
-    }
-
-    /* المميزات */
-    .features {
-      background-color: #0b2f24;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .features-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .features-col {
-      flex: 1;
-      min-width: 200px;
-      margin: 20px;
-    }
-
-    .features-col h3 {
-      margin-bottom: 20px;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    .features-center {
-      font-size: 55px;
-      font-weight: bold;
-      margin: 40px 0;
-      color: #d79c5a;
-    }
-
-    /* ختام */
-    .vision-text {
-      background-color: #f5f5f5;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 17px;
-      color: #444;
-      line-height: 2;
-    }
-
-    footer {
-      background-color: #333;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+    .menu-toggle {
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      display: none;
     }
 
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        background: #0b2f24;
+      .menu-toggle {
+        display: block;
       }
+      .nav-menu {
+        display: none;
+      }
+    }
 
-      .features-container {
-        flex-direction: column;
-      }
+    .side-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0b2f24;
+      padding-top: 60px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
 
-      .features-center {
-        font-size: 40px;
-      }
+    .side-menu.open {
+      display: block;
+      transform: translateX(0);
+    }
 
-      .hero h1 {
-        font-size: 32px;
-      }
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu li {
+      border-bottom: 1px solid #ffffff22;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .hero {
+      position: relative;
+      height: 300px;
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(11, 47, 36, 0.6);
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about-section h1 {
+      color: #0b2f24;
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      max-width: 900px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      line-height: 2;
+      color: #333;
+    }
+
+    .core-values {
+      background-color: #0b2f24;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .core-values h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    .values-grid div {
+      background-color: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .values-grid .center-year {
+      font-size: 50px;
+      background-color: transparent;
+      font-weight: bold;
+      padding: 20px 0;
+    }
+
+    .core-values p {
+      font-size: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
+    footer .copyright {
+      text-align: center;
+      padding: 20px 10px 10px;
+      font-size: 14px;
+      background-color: #333;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">عن الشركة</a></li>
+      <li><a href="companies.html">شركاتنا</a></li>
+      <li><a href="sustainability.html">الاستدامة</a></li>
+      <li><a href="media.html">المركز الإعلامي</a></li>
+      <li><a href="contact.html">اتصل بنا</a></li>
+      <li><a href="careers.html">الوظائف</a></li>
+    </ul>
+  </div>
 
-  <!-- الشريط العلوي -->
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="img/logo.jpeg" alt="شعار الشركة" /></a>
+        <a href="index.html">
+          <img src="img/logo.jpeg" alt="شعار شركة النصيان القابضة" style="height: 40px;" />
+        </a>
       </div>
       <nav>
-        <ul>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
           <li><a href="index.html">الرئيسية</a></li>
           <li><a href="about.html">عن الشركة</a></li>
           <li><a href="companies.html">شركاتنا</a></li>
@@ -179,47 +197,48 @@
     </div>
   </header>
 
-  <!-- بنر -->
-  <section class="hero">
-    <h1>من نحن</h1>
-    <h2>لمحة عامة عن شركة النصيان القابضة</h2>
-  </section>
+  <main>
+    <section class="hero">
+      <img src="img/banner.jpeg" alt="بانر الشركة" class="hero-banner">
+      <div class="hero-overlay"></div>
+    </section>
 
-  <!-- نص تعريفي -->
-  <div class="about-text">
-    تأسست شركة النصيان القابضة عام 2015 كمجموعة سعودية متخصصة في قطاعات متنوعة تشمل التطوير والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة، قائمة على الابتكار، وتعمل على تمكين الكفاءات الوطنية.
-    <br><br>
-    تهدف الشركة إلى تعزيز مكانتها ضمن رواد السوق المحلي والإقليمي، وتُسهم في دعم رؤية المملكة 2030 من خلال التوسع المدروس، والشراكات الاستراتيجية، وتطوير حلول أعمال فاعلة. نحن نؤمن أن النجاح لا يتحقق إلا بالقيم، والالتزام، والمسؤولية.
-  </div>
+    <section class="about-section">
+      <h1>من نحن</h1>
+      <p>
+        تأسست شركة النصيان القابضة في عام 2015 كمجموعة سعودية وطنية متخصصة في قطاعات متعددة تشمل التطوير، التجارة والخدمات. نركز على تقديم قيمة مستدامة للمجتمع من خلال تطوير بيئة أعمال حديثة قائمة على الإبداع، التقنية، والاستثمار في الكفاءات الوطنية. نطمح إلى الريادة في تحقيق الأهداف الوطنية لرؤية المملكة 2030، مع الاستمرار في الابتكار والتوسع لخدمة عملائنا وشركائنا بفعالية.
+      </p>
+    </section>
 
-  <!-- المميزات -->
-  <section class="features">
-    <div class="features-container">
-      <div class="features-col">
-        <h3>الاهتمام بالمبيعات</h3>
-        <h3>العمل الجاد والتنوع</h3>
-        <h3>النمو بطريقة ذكية</h3>
-        <h3>رضا العملاء</h3>
+    <section class="core-values">
+      <h2>قيمنا الأساسية</h2>
+      <div class="values-grid">
+        <div>أفكار مبتكرة</div>
+        <div>الاعتماد على الكفاءات الوطنية</div>
+        <div class="center-year">2015</div>
+        <div>التقنيات الحديثة</div>
+        <div>بناء علاقات متينة/وطيدة</div>
+        <div>الاهتمام بالمبيعات</div>
+        <div>العمل الجاد والتنوع</div>
+        <div>النمو بطريقة ذكية</div>
+        <div>رضا العملاء</div>
       </div>
-      <div class="features-center">2015</div>
-      <div class="features-col">
-        <h3>أفكار مبتكرة</h3>
-        <h3>الاعتماد على الكفاءات الوطنية</h3>
-        <h3>التقنيات الحديثة</h3>
-        <h3>بناء علاقات متينة / وطيدة</h3>
-      </div>
-    </div>
-  </section>
+      <p>
+        من خلال التزامنا برؤية 2030، نسعى لتحقيق إنجازات مستدامة تسهم في بناء اقتصاد مزدهر، ومجتمع حيوي، ووطن طموح. نحرص على دعم البيئة والاستثمار في التقنيات والمبادرات التي تحقق القيمة وتواكب المستقبل.
+      </p>
+    </section>
+  </main>
 
-  <!-- فقرة رؤية -->
-  <div class="vision-text">
-    من خلال التزامنا بتحقيق رؤية المملكة 2030 وأهداف التنمية المستدامة، نواصل رحلتنا نحو التميّز عبر تمكين الكفاءات السعودية، وتبنّي أحدث التقنيات، وتوسيع نطاق أعمالنا بما يحقق القيمة للمجتمع ويواكب تطلعات الأجيال القادمة.
-  </div>
-
-  <!-- الفوتر -->
   <footer>
-    &copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.
+    <div class="copyright">
+      <p>&copy; 2025 شركة النصيان القابضة. جميع الحقوق محفوظة.</p>
+    </div>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
